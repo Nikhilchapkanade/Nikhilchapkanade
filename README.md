@@ -28,68 +28,17 @@ class Nikhil:
 
 ### 🚀 Featured Projects
 
-<table>
-  <tr>
-    <td width="50%">
-      <h3 align="center">🎯 INTERCEPTOR</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/INTERCEPTOR">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=INTERCEPTOR&theme=github_dark&hide_border=true" alt="INTERCEPTOR"/>
-        </a>
-      </p>
-      <p align="center"><em>Autonomous Swarm Defense — 5-layer RL + Kafka + LangGraph architecture</em></p>
-    </td>
-    <td width="50%">
-      <h3 align="center">📄 Paper-Prover</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/Paper-Prover">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=Paper-Prover&theme=github_dark&hide_border=true" alt="Paper-Prover"/>
-        </a>
-      </p>
-      <p align="center"><em>Two AIs debate research paper claims until one proves the other wrong</em></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3 align="center">📈 quant-mind</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/quant-mind">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=quant-mind&theme=github_dark&hide_border=true" alt="quant-mind"/>
-        </a>
-      </p>
-      <p align="center"><em>Financial agent that predicts stocks with deep learning inside Claude</em></p>
-    </td>
-    <td width="50%">
-      <h3 align="center">🔗 MCP-CLI</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/MCP-CLI">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=MCP-CLI&theme=github_dark&hide_border=true" alt="MCP-CLI"/>
-        </a>
-      </p>
-      <p align="center"><em>MCP client using Python and OpenRouter for tool-augmented LLMs</em></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3 align="center">👁️ YOLO26n</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/YOLO26n">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=YOLO26n&theme=github_dark&hide_border=true" alt="YOLO26n"/>
-        </a>
-      </p>
-      <p align="center"><em>Real-time vehicle detection, tracking & counting with YOLO26</em></p>
-    </td>
-    <td width="50%">
-      <h3 align="center">🧠 Skill-LLM</h3>
-      <p align="center">
-        <a href="https://github.com/Nikhilchapkanade/Skill-LLM">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Nikhilchapkanade&repo=Skill-LLM&theme=github_dark&hide_border=true" alt="Skill-LLM"/>
-        </a>
-      </p>
-      <p align="center"><em>Hot-swapping LoRA adapters for multi-task LLM specialization</em></p>
-    </td>
-  </tr>
-</table>
+|  | Project | What it does | Stack |
+|--|---------|-------------|-------|
+| 🎯 | **[INTERCEPTOR](https://github.com/Nikhilchapkanade/INTERCEPTOR)** | Autonomous Swarm Defense — 5-layer system with RL, Kafka streaming, causal AI, and LangGraph supervisor | `Python` `PyTorch` `Gymnasium` `Kafka` `LangGraph` |
+| 📄 | **[Paper-Prover](https://github.com/Nikhilchapkanade/Paper-Prover)** | Two AIs debate every research paper claim until one admits they're wrong — catches inflated results and contradictions | `HTML` `JavaScript` `AI Debate` |
+| 📈 | **[quant-mind](https://github.com/Nikhilchapkanade/quant-mind)** | Financial agent with deep learning stock prediction running as an MCP server inside Claude | `Python` `MCP` `Deep Learning` |
+| 🔗 | **[MCP-CLI](https://github.com/Nikhilchapkanade/MCP-CLI)** | MCP client using Python and OpenRouter for tool-augmented LLM interactions | `Python` `MCP` `OpenRouter` |
+| 🎨 | **[ClaudeVision](https://github.com/Nikhilchapkanade/ClaudeVision)** | Bridge between Claude Desktop and ComfyUI — generate AI images on-demand with zero-GPU cloud architecture | `Python` `MCP` `ComfyUI` |
+| 👁️ | **[YOLO26n](https://github.com/Nikhilchapkanade/YOLO26n)** | Real-time vehicle detection, tracking & counting using the latest YOLO26 model | `Python` `YOLO` `OpenCV` |
+| 🧠 | **[Skill-LLM](https://github.com/Nikhilchapkanade/Skill-LLM)** | Hot-swapping LoRA adapters for multi-task LLM specialization — math, code, emails, all without crashing out | `Python` `LoRA` `LLM` |
+| 📚 | **[BigDoc-Server](https://github.com/Nikhilchapkanade/BigDoc-Server)** | MCP server for recursive LLM reasoning — unlimited context via search, code, and think tools | `TypeScript` `MCP` `LLM` |
+| 🔌 | **[Mcp-Core](https://github.com/Nikhilchapkanade/Mcp-Core)** | RAG agent with MCP and Llama 3.2 — instantly connects tools and knowledge base | `Python` `MCP` `Llama` |
 
 ---
 
