@@ -18,10 +18,20 @@
 
 ```python
 class Nikhil:
-    location  = "Pune, India"
-    focus     = ["Agentic AI", "Reinforcement Learning", "MCP Protocol", "Computer Vision"]
-    building  = "Autonomous systems that learn, reason, and act"
-    exploring = "LangGraph • Stable-Baselines3 • Causal AI • Real-time streaming"
+    location   = "Pune, India 📍"
+    role       = "AI/ML Engineer"
+    
+    core_stack = ["Agentic AI", "Reinforcement Learning", "MCP Protocol", "Computer Vision"]
+    devops     = ["AWS (EC2 • S3 • Lambda)", "Docker", "MLOps", "CI/CD"]
+    building   = "Autonomous systems that learn, reason, and act"
+    exploring  = "LangGraph • Stable-Baselines3 • Causal AI • Kafka Streaming"
+    
+    loading_next = ["☁️ AWS Certified Solutions Architect",
+                    "🔄 Full MLOps Pipeline (MLflow + DVC + Airflow)",
+                    "🤖 Multi-Agent Production Systems"]
+    
+    def __repr__(self):
+        return "shipping code that thinks for itself 🚀"
 ```
 
 ---
