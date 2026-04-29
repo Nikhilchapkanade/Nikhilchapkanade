@@ -4,7 +4,7 @@
 
 <p align="center">
   <em>AI Engineer building things that think, see, and act autonomously.</em><br>
-  <strong>Reinforcement Learning • Agentic AI • MCP • Computer Vision • MLOps</strong>
+  <strong>Reinforcement Learning • Agentic AI • MCP • Computational Neuroscience • Computer Vision</strong>
 </p>
 
 <p align="center">
@@ -22,10 +22,13 @@ class Nikhil:
     location   = "Pune, India 📍"
     role       = "AI/ML Engineer"
     
-    core_stack = ["Agentic AI", "Reinforcement Learning", "MCP Protocol", "Computer Vision"]
+    core_stack = ["Agentic AI", "Reinforcement Learning", "MCP Protocol",
+                  "Computer Vision", "Computational Neuroscience"]
     devops     = ["AWS (EC2 • S3 • Lambda)", "Docker", "MLOps", "CI/CD"]
     building   = "Autonomous systems that learn, reason, and act"
-    exploring  = "LangGraph • Stable-Baselines3 • Causal AI • Kafka Streaming"
+    exploring  = "LangGraph • Stable-Baselines3 • Causal AI • Kafka • Three.js"
+    
+    latest     = "🧠 NeuroPrism — fMRI-grade 3D brain visualization with Meta TRIBEv2"
     
     loading_next = ["☁️ AWS Certified Solutions Architect",
                     "🔄 Full MLOps Pipeline (MLflow + DVC + Airflow)",
@@ -41,13 +44,14 @@ class Nikhil:
 
 |  | Project | What it does | Stack |
 |--|---------|-------------|-------|
+| 🧠 | **[NeuroPrism](https://github.com/Nikhilchapkanade/NeuroPrism)** | Real-time cinematic neurofeedback dashboard — fMRI-grade 3D brain heatmaps synced to video using Meta TRIBEv2 with AI scene analysis | `TypeScript` `Three.js` `React` `Gemini` `Python` |
 | 🎯 | **[INTERCEPTOR](https://github.com/Nikhilchapkanade/INTERCEPTOR)** | Autonomous Swarm Defense — 5-layer system with RL, Kafka streaming, causal AI, and LangGraph supervisor | `Python` `PyTorch` `Gymnasium` `Kafka` `LangGraph` |
 | 📄 | **[Paper-Prover](https://github.com/Nikhilchapkanade/Paper-Prover)** | Two AIs debate every research paper claim until one admits they're wrong — catches inflated results and contradictions | `HTML` `JavaScript` `AI Debate` |
 | 📈 | **[quant-mind](https://github.com/Nikhilchapkanade/quant-mind)** | Financial agent with deep learning stock prediction running as an MCP server inside Claude | `Python` `MCP` `Deep Learning` |
 | 🔗 | **[MCP-CLI](https://github.com/Nikhilchapkanade/MCP-CLI)** | MCP client using Python and OpenRouter for tool-augmented LLM interactions | `Python` `MCP` `OpenRouter` |
 | 🎨 | **[ClaudeVision](https://github.com/Nikhilchapkanade/ClaudeVision)** | Bridge between Claude Desktop and ComfyUI — generate AI images on-demand with zero-GPU cloud architecture | `Python` `MCP` `ComfyUI` |
 | 👁️ | **[YOLO26n](https://github.com/Nikhilchapkanade/YOLO26n)** | Real-time vehicle detection, tracking & counting using the latest YOLO26 model | `Python` `YOLO` `OpenCV` |
-| 🧠 | **[Skill-LLM](https://github.com/Nikhilchapkanade/Skill-LLM)** | Hot-swapping LoRA adapters for multi-task LLM specialization — math, code, emails, all without crashing out | `Python` `LoRA` `LLM` |
+| 🧬 | **[Skill-LLM](https://github.com/Nikhilchapkanade/Skill-LLM)** | Hot-swapping LoRA adapters for multi-task LLM specialization — math, code, emails, all without crashing out | `Python` `LoRA` `LLM` |
 | 📚 | **[BigDoc-Server](https://github.com/Nikhilchapkanade/BigDoc-Server)** | MCP server for recursive LLM reasoning — unlimited context via search, code, and think tools | `TypeScript` `MCP` `LLM` |
 | 🔌 | **[Mcp-Core](https://github.com/Nikhilchapkanade/Mcp-Core)** | RAG agent with MCP and Llama 3.2 — instantly connects tools and knowledge base | `Python` `MCP` `Llama` |
 
@@ -83,6 +87,8 @@ class Nikhil:
     <td>
       <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
       <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white"/>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
       <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
       <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white"/>
