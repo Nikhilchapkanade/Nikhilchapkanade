@@ -1,16 +1,16 @@
-<img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" width="1000">
-<br><br>
-<h1 align="center">Hi 👋, I'm Nikhil</h1>
+<p align="center">
+  <img src="assets/banner.svg" width="100%" alt="Nikhil Chapkanade Banner"/>
+</p>
 
 <p align="center">
-  <em>AI Engineer building things that think, see, and act autonomously.</em><br>
+  <em>AI Engineer building autonomous systems that think, learn, and reason.</em><br>
   <strong>Reinforcement Learning • Agentic AI • MCP • Computational Neuroscience • Computer Vision</strong>
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/NikhilChapkanade"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://instagram.com/i_am_nikkhil"><img src="https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
-  <a href="mailto:nikhilchapkanade@gmail.com"><img src="https://img.shields.io/badge/-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://linkedin.com/in/NikhilChapkanade"><img src="https://img.shields.io/badge/LinkedIn-00F2FE?style=for-the-badge&amp;logo=linkedin&amp;logoColor=black" alt="LinkedIn"/></a>
+  <a href="https://instagram.com/i_am_nikkhil"><img src="https://img.shields.io/badge/Instagram-9D4EDD?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram"/></a>
+  <a href="mailto:nikhilchapkanade@gmail.com"><img src="https://img.shields.io/badge/Email-FF007F?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email"/></a>
 </p>
 
 ---
@@ -38,102 +38,64 @@ class Nikhil:
         return "shipping code that thinks for itself 🚀"
 ```
 
----
-
-### 🚀 Featured Projects
-
-|  | Project | What it does | Stack |
-|--|---------|-------------|-------|
-| 🧠 | **[NeuroPrism](https://github.com/Nikhilchapkanade/NeuroPrism)** | Real-time cinematic neurofeedback dashboard — fMRI-grade 3D brain heatmaps synced to video using Meta TRIBEv2 with AI scene analysis | `TypeScript` `Three.js` `React` `Gemini` `Python` |
-| 🎯 | **[INTERCEPTOR](https://github.com/Nikhilchapkanade/INTERCEPTOR)** | Autonomous Swarm Defense — 5-layer system with RL, Kafka streaming, causal AI, and LangGraph supervisor | `Python` `PyTorch` `Gymnasium` `Kafka` `LangGraph` |
-| 📄 | **[Paper-Prover](https://github.com/Nikhilchapkanade/Paper-Prover)** | Two AIs debate every research paper claim until one admits they're wrong — catches inflated results and contradictions | `HTML` `JavaScript` `AI Debate` |
-| 📈 | **[quant-mind](https://github.com/Nikhilchapkanade/quant-mind)** | Financial agent with deep learning stock prediction running as an MCP server inside Claude | `Python` `MCP` `Deep Learning` |
-| 🔗 | **[MCP-CLI](https://github.com/Nikhilchapkanade/MCP-CLI)** | MCP client using Python and OpenRouter for tool-augmented LLM interactions | `Python` `MCP` `OpenRouter` |
-| 🎨 | **[ClaudeVision](https://github.com/Nikhilchapkanade/ClaudeVision)** | Bridge between Claude Desktop and ComfyUI — generate AI images on-demand with zero-GPU cloud architecture | `Python` `MCP` `ComfyUI` |
-| 👁️ | **[YOLO26n](https://github.com/Nikhilchapkanade/YOLO26n)** | Real-time vehicle detection, tracking & counting using the latest YOLO26 model | `Python` `YOLO` `OpenCV` |
-| 🧬 | **[Skill-LLM](https://github.com/Nikhilchapkanade/Skill-LLM)** | Hot-swapping LoRA adapters for multi-task LLM specialization — math, code, emails, all without crashing out | `Python` `LoRA` `LLM` |
-| 📚 | **[BigDoc-Server](https://github.com/Nikhilchapkanade/BigDoc-Server)** | MCP server for recursive LLM reasoning — unlimited context via search, code, and think tools | `TypeScript` `MCP` `LLM` |
-| 🔌 | **[Mcp-Core](https://github.com/Nikhilchapkanade/Mcp-Core)** | RAG agent with MCP and Llama 3.2 — instantly connects tools and knowledge base | `Python` `MCP` `Llama` |
+<p align="center">
+  <img src="assets/rl_simulation.svg" width="49%" alt="RL Gridworld Simulation"/>
+  <img src="assets/neuro_prism.svg" width="49%" alt="NeuroPrism Brain fMRI Activity"/>
+</p>
 
 ---
 
-### 🛠️ Tech Arsenal
-
-<table>
-  <tr>
-    <td><strong>🤖 AI / ML</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Stable_Baselines3-3776AB?style=flat-square&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/badge/LangGraph-7C3AED?style=flat-square&logo=langchain&logoColor=white"/>
-      <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/>
-      <img src="https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logo=darkreader&logoColor=black"/>
-      <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>⚡ Backend</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>🎨 Frontend</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white"/>
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-      <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>🗄️ Data</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
-      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white"/>
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>🔧 Tools</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-      <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white"/>
-      <img src="https://img.shields.io/badge/TensorBoard-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
-    </td>
-  </tr>
-</table>
-
----
-
-### 📊 GitHub Stats
+<h3 align="center">🚀 Featured Projects</h3>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilchapkanade&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&ring_color=58a6ff" width="48%"/>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Nikhilchapkanade&theme=github-dark-blue&hide_border=true" width="48%"/>
+  <a href="https://github.com/Nikhilchapkanade/NeuroPrism">
+    <img src="assets/project_neuroprism.svg" width="32.5%" alt="NeuroPrism Card"/>
+  </a>
+  <a href="https://github.com/Nikhilchapkanade/INTERCEPTOR">
+    <img src="assets/project_interceptor.svg" width="32.5%" alt="INTERCEPTOR Card"/>
+  </a>
+  <a href="https://github.com/Nikhilchapkanade/Paper-Prover">
+    <img src="assets/project_paperprover.svg" width="32.5%" alt="Paper-Prover Card"/>
+  </a>
+</p>
+
+#### 📂 Other Notable Repositories
+
+*   📈 **[quant-mind](https://github.com/Nikhilchapkanade/quant-mind)** - Financial agent with deep learning stock prediction running as an MCP server inside Claude.
+*   🔗 **[MCP-CLI](https://github.com/Nikhilchapkanade/MCP-CLI)** - MCP client using Python and OpenRouter for tool-augmented LLM interactions.
+*   🎨 **[ClaudeVision](https://github.com/Nikhilchapkanade/ClaudeVision)** - Bridge between Claude Desktop and ComfyUI — generate AI images on-demand with zero-GPU cloud architecture.
+*   👁️ **[YOLO26n](https://github.com/Nikhilchapkanade/YOLO26n)** - Real-time vehicle detection, tracking & counting using the latest YOLO26 model.
+*   🧬 **[Skill-LLM](https://github.com/Nikhilchapkanade/Skill-LLM)** - Hot-swapping LoRA adapters for multi-task LLM specialization.
+*   📚 **[BigDoc-Server](https://github.com/Nikhilchapkanade/BigDoc-Server)** - MCP server for recursive LLM reasoning — unlimited context via search, code, and think tools.
+*   🔌 **[Mcp-Core](https://github.com/Nikhilchapkanade/Mcp-Core)** - RAG agent with MCP and Llama 3.2 — instantly connects tools and knowledge base.
+
+---
+
+<h3 align="center">🛠️ Tech Arsenal</h3>
+
+<p align="center">
+  <img src="assets/tech_arsenal.svg" width="100%" alt="Tech Stack Deck"/>
+</p>
+
+---
+
+<h3 align="center">📊 GitHub Activity &amp; Analytics</h3>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilchapkanade&amp;bg_color=030712&amp;title_color=00F2FE&amp;text_color=94a3b8&amp;icon_color=9D4EDD&amp;hide_border=true&amp;include_all_commits=true&amp;count_private=true&amp;show_icons=true" width="48%"/>
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Nikhilchapkanade&amp;background=030712&amp;ring=9D4EDD&amp;fire=FF007F&amp;currStreakNum=00F2FE&amp;hide_border=true" width="48%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilchapkanade&theme=github_dark&hide_border=true&layout=compact&langs_count=10" width="40%"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilchapkanade&amp;bg_color=030712&amp;title_color=00F2FE&amp;text_color=94a3b8&amp;hide_border=true&amp;layout=compact&amp;langs_count=10" width="40%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nikhilchapkanade&theme=github-dark&hide_border=true&area=true&custom_title=Contribution%20Graph" width="95%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nikhilchapkanade&amp;bg_color=030712&amp;color=00F2FE&amp;line=9D4EDD&amp;point=FF007F&amp;hide_border=true&amp;area=true&amp;custom_title=Contribution%20Graph" width="95%"/>
 </p>
 
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Nikhilchapkanade&style=for-the-badge&color=58a6ff&label=PROFILE+VIEWS" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=Nikhilchapkanade&amp;style=for-the-badge&amp;color=00f2fe&amp;label=PROFILE+VIEWS" alt="Profile Views"/>
 </p>

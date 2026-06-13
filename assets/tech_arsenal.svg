@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+    
+    <!-- Neon Glow Filters -->
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-violet" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Orbitron:wght@700&amp;display=swap');
+    
+    .main-bg { fill: #030712; }
+    .panel { fill: url(#cardBg); stroke-width: 1.2; rx: 8px; }
+    
+    /* Typography */
+    .section-title { font-family: 'Orbitron', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+    .tech-text { font-family: 'Space Grotesk', sans-serif; font-size: 12px; fill: #e2e8f0; font-weight: 500; }
+    
+    /* Indicator Dots & Accents */
+    .dot { r: 3px; }
+    .dot-teal { fill: #00F5D4; filter: url(#glow-teal); }
+    .dot-cyan { fill: #00F2FE; filter: url(#glow-cyan); }
+    .dot-violet { fill: #9D4EDD; filter: url(#glow-violet); }
+    .dot-pink { fill: #FF007F; filter: url(#glow-pink); }
+    
+    .panel-teal { stroke: #00F5D4; stroke-opacity: 0.25; }
+    .panel-cyan { stroke: #00F2FE; stroke-opacity: 0.25; }
+    .panel-violet { stroke: #9D4EDD; stroke-opacity: 0.25; }
+    .panel-pink { stroke: #FF007F; stroke-opacity: 0.25; }
+    
+    .accent-bar { height: 3px; rx: 1.5px; }
+    
+    /* Hover/Pulse Animations */
+    @keyframes subtle-pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    .pulse { animation: subtle-pulse 3s infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1000" height="320" class="main-bg"/>
+  
+  <!-- GRID OF 4 PANELS -->
+  <!-- Width: 216 each, Spacing: 24, Margins: 24 -->
+  
+  <!-- PANEL 1: AI / MACHINE LEARNING (Teal Accent) -->
+  <g transform="translate(24, 30)">
+    <!-- Base Panel -->
+    <rect width="216" height="260" class="panel panel-teal"/>
+    <rect width="216" height="3" class="accent-bar" fill="#00F5D4"/>
+    
+    <!-- Title -->
+    <text x="20" y="32" class="section-title" fill="#00F5D4">AI &amp; MACHINE LEARNING</text>
+    
+    <!-- Tech Stack Rows -->
+    <g transform="translate(20, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 15)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">PyTorch</text>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(0, 40)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">Stable-Baselines3 (RL)</text>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(0, 65)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">LangGraph (Agents)</text>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(0, 90)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">OpenCV</text>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(0, 115)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">YOLO26</text>
+      </g>
+      <!-- Row 6 -->
+      <g transform="translate(0, 140)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">HuggingFace Hub</text>
+      </g>
+      <!-- Row 7 -->
+      <g transform="translate(0, 165)">
+        <circle cx="5" cy="-4" class="dot dot-teal"/>
+        <text x="18" y="0" class="tech-text">Meta TRIBEv2</text>
+      </g>
+    </g>
+    
+    <!-- Interactive HUD visual -->
+    <rect x="20" y="232" width="176" height="10" rx="2" fill="#04060b" stroke="#1e293b" stroke-width="0.5"/>
+    <rect x="22" y="234" width="120" height="6" rx="1" fill="#00F5D4" fill-opacity="0.8" class="pulse"/>
+  </g>
+
+  <!-- PANEL 2: BACKEND & SCALE (Cyan Accent) -->
+  <g transform="translate(264, 30)">
+    <!-- Base Panel -->
+    <rect width="216" height="260" class="panel panel-cyan"/>
+    <rect width="216" height="3" class="accent-bar" fill="#00F2FE"/>
+    
+    <!-- Title -->
+    <text x="20" y="32" class="section-title" fill="#00F2FE">BACKEND &amp; STREAMING</text>
+    
+    <!-- Tech Stack Rows -->
+    <g transform="translate(20, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 15)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">Python (FastAPI / Django)</text>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(0, 40)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">Node.js (TypeScript)</text>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(0, 65)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">Apache Kafka</text>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(0, 90)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">MCP Protocol</text>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(0, 115)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">PostgreSQL</text>
+      </g>
+      <!-- Row 6 -->
+      <g transform="translate(0, 140)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">MongoDB / Neo4j</text>
+      </g>
+      <!-- Row 7 -->
+      <g transform="translate(0, 165)">
+        <circle cx="5" cy="-4" class="dot dot-cyan"/>
+        <text x="18" y="0" class="tech-text">AWS (Serverless / EC2)</text>
+      </g>
+    </g>
+    
+    <!-- Interactive HUD visual -->
+    <rect x="20" y="232" width="176" height="10" rx="2" fill="#04060b" stroke="#1e293b" stroke-width="0.5"/>
+    <rect x="22" y="234" width="150" height="6" rx="1" fill="#00F2FE" fill-opacity="0.8" class="pulse"/>
+  </g>
+
+  <!-- PANEL 3: FRONTEND & 3D (Violet Accent) -->
+  <g transform="translate(504, 30)">
+    <!-- Base Panel -->
+    <rect width="216" height="260" class="panel panel-violet"/>
+    <rect width="216" height="3" class="accent-bar" fill="#9D4EDD"/>
+    
+    <!-- Title -->
+    <text x="20" y="32" class="section-title" fill="#9D4EDD">FRONTEND &amp; VISUALS</text>
+    
+    <!-- Tech Stack Rows -->
+    <g transform="translate(20, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 15)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">React.js</text>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(0, 40)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">Next.js</text>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(0, 65)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">Three.js (WebGL / 3D)</text>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(0, 90)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">TypeScript / JavaScript</text>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(0, 115)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">Flutter</text>
+      </g>
+      <!-- Row 6 -->
+      <g transform="translate(0, 140)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">Streamlit</text>
+      </g>
+      <!-- Row 7 -->
+      <g transform="translate(0, 165)">
+        <circle cx="5" cy="-4" class="dot dot-violet"/>
+        <text x="18" y="0" class="tech-text">TailwindCSS / CSS</text>
+      </g>
+    </g>
+    
+    <!-- Interactive HUD visual -->
+    <rect x="20" y="232" width="176" height="10" rx="2" fill="#04060b" stroke="#1e293b" stroke-width="0.5"/>
+    <rect x="22" y="234" width="135" height="6" rx="1" fill="#9D4EDD" fill-opacity="0.8" class="pulse"/>
+  </g>
+
+  <!-- PANEL 4: TOOLS & INFRA (Pink Accent) -->
+  <g transform="translate(744, 30)">
+    <!-- Base Panel -->
+    <rect width="216" height="260" class="panel panel-pink"/>
+    <rect width="216" height="3" class="accent-bar" fill="#FF007F"/>
+    
+    <!-- Title -->
+    <text x="20" y="32" class="section-title" fill="#FF007F">TOOLS &amp; DEVOPS</text>
+    
+    <!-- Tech Stack Rows -->
+    <g transform="translate(20, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 15)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">Docker</text>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(0, 40)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">CUDA Acceleration</text>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(0, 65)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">MLflow / DVC</text>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(0, 90)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">Airflow</text>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(0, 115)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">Git / GitHub Actions</text>
+      </g>
+      <!-- Row 6 -->
+      <g transform="translate(0, 140)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">Linux (Ubuntu / Debian)</text>
+      </g>
+      <!-- Row 7 -->
+      <g transform="translate(0, 165)">
+        <circle cx="5" cy="-4" class="dot dot-pink"/>
+        <text x="18" y="0" class="tech-text">CI / CD Pipelines</text>
+      </g>
+    </g>
+    
+    <!-- Interactive HUD visual -->
+    <rect x="20" y="232" width="176" height="10" rx="2" fill="#04060b" stroke="#1e293b" stroke-width="0.5"/>
+    <rect x="22" y="234" width="145" height="6" rx="1" fill="#FF007F" fill-opacity="0.8" class="pulse"/>
+  </g>
+</svg>

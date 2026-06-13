@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <defs>
+    <!-- Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Orbitron:wght@700&amp;display=swap');
+    
+    .card-bg { fill: url(#bgGrad); stroke: #1e293b; stroke-width: 1.5; rx: 8px; }
+    .grid-line { stroke: #1e293b; stroke-width: 0.5; opacity: 0.4; }
+    
+    /* Typography */
+    .title { font-family: 'Orbitron', sans-serif; font-size: 13px; fill: #00F2FE; letter-spacing: 2px; }
+    .subtitle { font-family: 'Space Grotesk', sans-serif; font-size: 10px; fill: #64748b; letter-spacing: 1px; }
+    
+    .label { font-family: 'Space Grotesk', sans-serif; font-size: 11px; fill: #94a3b8; }
+    .value { font-family: monospace; font-size: 12px; font-weight: bold; }
+    
+    /* Episode 104 (Fail) States */
+    .ep104-text { fill: #f43f5e; }
+    .ep105-text { fill: #10b981; }
+    
+    /* Animation Control */
+    @keyframes agent-run {
+      /* Ep 104: Fail (0% - 35%) */
+      0% { cx: 270px; cy: 230px; opacity: 1; fill: #00F2FE; filter: url(#glow-cyan); }
+      10% { cx: 270px; cy: 190px; opacity: 1; fill: #00F2FE; filter: url(#glow-cyan); }
+      20% { cx: 310px; cy: 190px; opacity: 1; fill: #00F2FE; filter: url(#glow-cyan); }
+      28% { cx: 310px; cy: 150px; opacity: 1; fill: #ef4444; filter: url(#glow-red); }
+      30%, 34% { cx: 310px; cy: 150px; opacity: 0; }
+      
+      /* Ep 105: Success (35% - 100%) */
+      35% { cx: 270px; cy: 230px; opacity: 0; fill: #00F2FE; }
+      36% { cx: 270px; cy: 230px; opacity: 1; filter: url(#glow-cyan); }
+      42% { cx: 270px; cy: 190px; opacity: 1; }
+      49% { cx: 270px; cy: 150px; opacity: 1; }
+      56% { cx: 270px; cy: 110px; opacity: 1; }
+      63% { cx: 270px; cy: 70px; opacity: 1; }
+      70% { cx: 310px; cy: 70px; opacity: 1; }
+      77% { cx: 350px; cy: 70px; opacity: 1; }
+      84% { cx: 390px; cy: 70px; opacity: 1; }
+      91% { cx: 430px; cy: 70px; opacity: 1; fill: #10b981; filter: url(#glow-green); }
+      96% { cx: 430px; cy: 70px; opacity: 0; }
+      100% { cx: 270px; cy: 230px; opacity: 0; }
+    }
+    
+    @keyframes obstacle-hit {
+      0%, 25%, 35%, 100% { opacity: 0.3; stroke: #f43f5e; fill: #f43f5e; fill-opacity: 0.1; }
+      28% { opacity: 1; fill-opacity: 0.6; filter: url(#glow-red); }
+    }
+    
+    @keyframes goal-pulse {
+      0%, 88%, 97%, 100% { transform: scale(1); filter: none; }
+      91% { transform: scale(1.3); filter: url(#glow-green); }
+    }
+    
+    @keyframes text-ep104 {
+      0%, 34% { opacity: 1; }
+      35%, 100% { opacity: 0; }
+    }
+    
+    @keyframes text-ep105 {
+      0%, 34% { opacity: 0; }
+      35%, 99% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    
+    @keyframes red-flash {
+      0%, 26%, 34%, 100% { opacity: 0; }
+      28%, 30% { opacity: 0.15; }
+    }
+    
+    @keyframes green-flash {
+      0%, 89%, 97%, 100% { opacity: 0; }
+      91%, 94% { opacity: 0.15; }
+    }
+
+    .agent {
+      animation: agent-run 10s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+    
+    .obs-alert {
+      animation: obstacle-hit 10s ease-in-out infinite;
+      transform-origin: 310px 150px;
+    }
+    
+    .goal-star {
+      animation: goal-pulse 10s ease-in-out infinite;
+      transform-origin: 430px 70px;
+    }
+    
+    .panel-104 {
+      animation: text-ep104 10s step-end infinite;
+    }
+    
+    .panel-105 {
+      animation: text-ep105 10s step-end infinite;
+    }
+    
+    .flash-r {
+      animation: red-flash 10s ease-out infinite;
+    }
+    .flash-g {
+      animation: green-flash 10s ease-out infinite;
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect width="500" height="300" class="card-bg"/>
+  
+  <!-- Ambient Flash overlays -->
+  <rect width="500" height="300" fill="#ef4444" class="flash-r" pointer-events="none" rx="8"/>
+  <rect width="500" height="300" fill="#10b981" class="flash-g" pointer-events="none" rx="8"/>
+
+  <!-- LEFT PANEL: Dashboard Info -->
+  <g transform="translate(30, 40)">
+    <!-- Header -->
+    <text class="title" x="0" y="15">RL_SIMULATION</text>
+    <text class="subtitle" x="0" y="30">MODEL-FREE REINFORCEMENT LEARNING</text>
+    
+    <line x1="0" y1="45" x2="170" y2="45" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Static details -->
+    <text class="label" x="0" y="70">ENVIRONMENT:</text>
+    <text class="value" x="100" y="70" fill="#e2e8f0">GridWorld 5x5</text>
+    
+    <text class="label" x="0" y="95">ALGORITHM:</text>
+    <text class="value" x="100" y="95" fill="#e2e8f0">Double DQN</text>
+    
+    <text class="label" x="0" y="120">DISCOUNT (γ):</text>
+    <text class="value" x="100" y="120" fill="#e2e8f0">0.99</text>
+    
+    <!-- Dynamic Panel: Episode 104 -->
+    <g class="panel-104">
+      <text class="label" x="0" y="155">EPISODE:</text>
+      <text class="value" x="100" y="155" fill="#f59e0b">0104</text>
+      
+      <text class="label" x="0" y="180">EPSILON (ε):</text>
+      <text class="value" x="100" y="180" fill="#f59e0b">0.250</text>
+      
+      <text class="label" x="0" y="205">STEP REWARD:</text>
+      <text class="value ep104-text" x="100" y="205">-10.0</text>
+      
+      <text class="label" x="0" y="230">EPISODE STATE:</text>
+      <text class="value ep104-text" x="100" y="230">EXPLORING</text>
+    </g>
+
+    <!-- Dynamic Panel: Episode 105 -->
+    <g class="panel-105">
+      <text class="label" x="0" y="155">EPISODE:</text>
+      <text class="value" x="100" y="155" fill="#10b981">0105</text>
+      
+      <text class="label" x="0" y="180">EPSILON (ε):</text>
+      <text class="value" x="100" y="180" fill="#10b981">0.050</text>
+      
+      <text class="label" x="0" y="205">STEP REWARD:</text>
+      <text class="value ep105-text" x="100" y="205">+100.0</text>
+      
+      <text class="label" x="0" y="230">EPISODE STATE:</text>
+      <text class="value ep105-text" x="100" y="230">OPTIMAL_PATH</text>
+    </g>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="220" y1="30" x2="220" y2="270" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- RIGHT PANEL: The Gridworld Visualizer (x=230 to 470, y=30 to 270) -->
+  <g transform="translate(0, 0)">
+    <!-- Grid Cells Background -->
+    <rect x="250" y="50" width="200" height="200" fill="#04060c" rx="4" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Grid Lines (4 vertical, 4 horizontal) -->
+    <path class="grid-line" d="M 290,50 L 290,250 M 330,50 L 330,250 M 370,50 L 370,250 M 410,50 L 410,250" />
+    <path class="grid-line" d="M 250,90 L 450,90 M 250,130 L 450,130 M 250,170 L 450,170 M 250,210 L 450,210" />
+
+    <!-- Start Cell Tag (S) -->
+    <text x="265" y="243" font-family="monospace" font-size="10" fill="#475569" font-weight="bold">S</text>
+
+    <!-- Goal Cell (Rotating/pulsing star/target at C4, R0: 430, 70) -->
+    <g class="goal-star" transform="translate(0, 0)">
+      <circle cx="430" cy="70" r="14" fill="#10b981" fill-opacity="0.1"/>
+      <circle cx="430" cy="70" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+      <polygon points="430,64 432,68 437,69 433,72 434,77 430,75 426,77 427,72 423,69 428,68" fill="#10b981"/>
+    </g>
+    
+    <!-- Obstacles (Red walls in Row 2: cells (1,2), (2,2), (3,2)) -->
+    <!-- Obstacle 1: 310, 150 -->
+    <rect x="292" y="132" width="36" height="36" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="1.5" class="obs-alert"/>
+    <line x1="297" y1="137" x2="323" y2="163" stroke="#f43f5e" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Obstacle 2: 350, 150 -->
+    <rect x="332" y="132" width="36" height="36" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="1.5" class="obs-alert" style="animation-delay: 0.1s;"/>
+    <line x1="337" y1="137" x2="363" y2="163" stroke="#f43f5e" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Obstacle 3: 390, 150 -->
+    <rect x="372" y="132" width="36" height="36" rx="3" fill="#f43f5e" fill-opacity="0.1" stroke="#f43f5e" stroke-width="1.5" class="obs-alert" style="animation-delay: 0.2s;"/>
+    <line x1="377" y1="137" x2="403" y2="163" stroke="#f43f5e" stroke-width="1" opacity="0.4"/>
+
+    <!-- Path overlays for debugging/visual style (dotted paths) -->
+    <!-- Path A: Explore -->
+    <path d="M 270,230 L 270,190 L 310,190 L 310,150" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3" opacity="0.2"/>
+    <!-- Path B: Optimal -->
+    <path d="M 270,230 L 270,190 L 270,150 L 270,110 L 270,70 L 430,70" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="3 3" opacity="0.25"/>
+
+    <!-- THE AGENT (Pulsing glowing circle) -->
+    <circle r="8" class="agent"/>
+  </g>
+  
+  <!-- Inner Border Highlights (Glow) -->
+  <rect x="2" y="2" width="496" height="296" rx="8" fill="none" stroke="#00F2FE" stroke-width="1.5" opacity="0.1" filter="url(#glow-cyan)"/>
+</svg>
