@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/NikhilChapkanade"><img src="https://img.shields.io/badge/LinkedIn-00F2FE?style=for-the-badge&amp;logo=linkedin&amp;logoColor=black" alt="LinkedIn"/></a>
-  <a href="https://instagram.com/i_am_nikkhil"><img src="https://img.shields.io/badge/Instagram-9D4EDD?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram"/></a>
-  <a href="mailto:nikhilchapkanade@gmail.com"><img src="https://img.shields.io/badge/Email-FF007F?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Email"/></a>
+  <a href="https://linkedin.com/in/NikhilChapkanade"><img src="https://img.shields.io/badge/LinkedIn-00F2FE?style=for-the-badge&logo=linkedin&logoColor=black" alt="LinkedIn"/></a>
+  <a href="https://instagram.com/i_am_nikkhil"><img src="https://img.shields.io/badge/Instagram-9D4EDD?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
+  <a href="mailto:nikhilchapkanade@gmail.com"><img src="https://img.shields.io/badge/Email-FF007F?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
 ---
@@ -82,20 +82,20 @@ class Nikhil:
 <h3 align="center">📊 GitHub Activity &amp; Analytics</h3>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilchapkanade&amp;bg_color=030712&amp;title_color=00F2FE&amp;text_color=94a3b8&amp;icon_color=9D4EDD&amp;hide_border=true&amp;include_all_commits=true&amp;count_private=true&amp;show_icons=true" width="48%"/>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Nikhilchapkanade&amp;background=030712&amp;ring=9D4EDD&amp;fire=FF007F&amp;currStreakNum=00F2FE&amp;hide_border=true" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilchapkanade&bg_color=030712&title_color=00F2FE&text_color=94a3b8&icon_color=9D4EDD&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" width="48%"/>
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Nikhilchapkanade&background=030712&ring=9D4EDD&fire=FF007F&currStreakNum=00F2FE&hide_border=true" width="48%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilchapkanade&amp;bg_color=030712&amp;title_color=00F2FE&amp;text_color=94a3b8&amp;hide_border=true&amp;layout=compact&amp;langs_count=10" width="40%"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilchapkanade&bg_color=030712&title_color=00F2FE&text_color=94a3b8&hide_border=true&layout=compact&langs_count=10" width="40%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nikhilchapkanade&amp;bg_color=030712&amp;color=00F2FE&amp;line=9D4EDD&amp;point=FF007F&amp;hide_border=true&amp;area=true&amp;custom_title=Contribution%20Graph" width="95%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nikhilchapkanade&bg_color=030712&color=00F2FE&line=9D4EDD&point=FF007F&hide_border=true&area=true&custom_title=Contribution%20Graph" width="95%"/>
 </p>
 
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Nikhilchapkanade&amp;style=for-the-badge&amp;color=00f2fe&amp;label=PROFILE+VIEWS" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=Nikhilchapkanade&style=for-the-badge&color=00f2fe&label=PROFILE+VIEWS" alt="Profile Views"/>
 </p>
