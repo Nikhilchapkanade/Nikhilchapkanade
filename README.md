@@ -38,10 +38,6 @@ class Nikhil:
         return "shipping code that thinks for itself 🚀"
 ```
 
-<p align="center">
-  <img src="assets/rl_simulation.svg" width="49%" alt="RL Gridworld Simulation"/>
-  <img src="assets/neuro_prism.svg" width="49%" alt="NeuroPrism Brain fMRI Activity"/>
-</p>
 
 ---
 

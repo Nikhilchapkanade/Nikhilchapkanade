@@ -1,207 +1,328 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
   <defs>
+    <!-- Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-violet" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <!-- Gradients -->
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060f"/>
+      <stop offset="100%" stop-color="#080e22"/>
+    </linearGradient>
+    
+    <linearGradient id="cyanViolet" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F2FE"/>
-      <stop offset="50%" stop-color="#9D4EDD"/>
-      <stop offset="100%" stop-color="#00F5D4"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
     </linearGradient>
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#9D4EDD" stop-opacity="0.2"/>
-    </linearGradient>
-    
-    <!-- Glow filter -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+
+    <!-- Clip Path for Terminal Scroll -->
+    <clipPath id="terminalClip">
+      <rect x="45" y="115" width="250" height="210"/>
+    </clipPath>
   </defs>
-  
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Orbitron:wght@700;900&amp;display=swap');
+    <![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Orbitron:wght@700;900&display=swap');
     
-    .bg { fill: #030712; }
-    .grid { fill: none; stroke: #1e293b; stroke-width: 0.5; opacity: 0.15; }
+    /* Global Styles */
+    .bg { fill: url(#bgGrad); }
+    .grid { fill: none; stroke: #1e293b; stroke-width: 0.5; opacity: 0.12; }
+    .hud-box { fill: #060914; fill-opacity: 0.7; stroke: #1e293b; stroke-width: 1.2; rx: 6px; }
+    .hud-border-glow { stroke: #00F2FE; stroke-opacity: 0.15; stroke-width: 1.5; fill: none; rx: 6px; filter: url(#glow-cyan); }
     
-    .title {
-      font-family: 'Orbitron', 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      font-weight: 900;
-      font-size: 42px;
-      fill: url(#textGrad);
-      letter-spacing: 2px;
+    /* Typography */
+    .font-hud { font-family: 'Space Grotesk', sans-serif; }
+    .font-logo { font-family: 'Orbitron', sans-serif; }
+    
+    .os-title { font-size: 13px; font-weight: 900; fill: #9D4EDD; letter-spacing: 2px; }
+    .os-subtitle { font-size: 14px; font-weight: 700; fill: #00F2FE; letter-spacing: 3px; filter: url(#glow-cyan); }
+    .os-stats { font-size: 10px; font-weight: 500; fill: #64748b; letter-spacing: 1px; }
+    
+    .panel-header { font-size: 11px; font-weight: 700; fill: #e2e8f0; letter-spacing: 1.5px; }
+    .terminal-text { font-family: monospace; font-size: 10px; fill: #38bdf8; }
+    
+    /* Keyframe Animations */
+    @keyframes scroll-log {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-160px); }
+    }
+    .scrolling-log {
+      animation: scroll-log 14s linear infinite;
     }
     
-    .subtitle {
-      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      fill: #e2e8f0;
-      letter-spacing: 1px;
+    @keyframes spin-cw {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .rotate-cw {
+      animation: spin-cw 25s linear infinite;
+      transform-origin: 500px 255px;
     }
     
-    .tagline {
-      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      font-size: 13px;
-      fill: #64748b;
-      letter-spacing: 3px;
+    @keyframes spin-ccw {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .rotate-ccw {
+      animation: spin-ccw 15s linear infinite;
+      transform-origin: 500px 255px;
     }
     
-    /* Animation keyframes */
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.4; }
-      50% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 8px #00F2FE); }
+    @keyframes sphere-spin {
+      0% { transform: rotateX(15deg) rotateY(0deg); }
+      100% { transform: rotateX(15deg) rotateY(360deg); }
+    }
+    .sphere-core {
+      animation: sphere-spin 20s linear infinite;
+      transform-origin: 500px 255px;
+      transform-style: preserve-3d;
     }
     
-    @keyframes pulse-purple {
-      0%, 100% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.15); opacity: 0.9; filter: drop-shadow(0 0 8px #9D4EDD); }
+    @keyframes wave-scroll {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
     }
+    .wave-c { stroke: #00F5D4; stroke-width: 1.5; stroke-dasharray: 40 10; animation: wave-scroll 4s linear infinite; filter: url(#glow-cyan); }
+    .wave-v { stroke: #9D4EDD; stroke-width: 1.5; stroke-dasharray: 30 15; animation: wave-scroll 6s linear infinite; filter: url(#glow-violet); }
+    .wave-p { stroke: #FF007F; stroke-width: 1.5; stroke-dasharray: 20 20; animation: wave-scroll 3s linear infinite; filter: url(#glow-pink); }
     
-    @keyframes dash {
-      to {
-        stroke-dashoffset: -40;
-      }
+    @keyframes load-bar {
+      0%, 100% { width: 45%; }
+      50% { width: 85%; }
     }
+    @keyframes load-bar-2 {
+      0%, 100% { width: 75%; }
+      50% { width: 50%; }
+    }
+    .progress-bar-val-1 { animation: load-bar 4s ease-in-out infinite; }
+    .progress-bar-val-2 { animation: load-bar-2 5s ease-in-out infinite; }
     
     @keyframes scanline {
       0% { transform: translateY(0); }
-      100% { transform: translateY(320px); }
+      100% { transform: translateY(480px); }
     }
-    
-    .node-c {
-      animation: pulse 4s ease-in-out infinite;
-      transform-origin: center;
-    }
-    .node-p {
-      animation: pulse-purple 5s ease-in-out infinite;
-      transform-origin: center;
-    }
-    
-    .edge-active {
-      stroke-dasharray: 8 12;
-      animation: dash 2s linear infinite;
-    }
-    
-    .scan {
+    .scanner {
       stroke: #00F2FE;
       stroke-width: 0.5;
-      opacity: 0.03;
-      animation: scanline 8s linear infinite;
+      opacity: 0.04;
+      animation: scanline 7s linear infinite;
     }
+    ]]>
   </style>
-  
-  <!-- Background -->
-  <rect class="bg" width="1000" height="320"/>
-  
-  <!-- Glowing Background Orbs -->
-  <circle cx="200" cy="160" r="250" fill="url(#glow)"/>
-  <circle cx="800" cy="160" r="280" fill="url(#glow)"/>
-  
-  <!-- Grid -->
-  <path class="grid" d="M 0,40 L 1000,40 M 0,80 L 1000,80 M 0,120 L 1000,120 M 0,160 L 1000,160 M 0,200 L 1000,200 M 0,240 L 1000,240 M 0,280 L 1000,280 M 100,0 L 100,320 M 200,0 L 200,320 M 300,0 L 300,320 M 400,0 L 400,320 M 500,0 L 500,320 M 600,0 L 600,320 M 700,0 L 700,320 M 800,0 L 800,320 M 900,0 L 900,320" />
-  
-  <!-- Scanline -->
-  <line class="scan" x1="0" y1="0" x2="1000" y2="0" />
-  
-  <!-- Code Dashboard Decors -->
-  <g opacity="0.3" transform="translate(40, 40)">
-    <rect x="0" y="0" width="12" height="12" fill="none" stroke="#00F2FE" stroke-width="1.5"/>
-    <line x1="6" y1="0" x2="6" y2="12" stroke="#00F2FE" stroke-width="0.5"/>
-    <line x1="0" y1="6" x2="12" y2="6" stroke="#00F2FE" stroke-width="0.5"/>
-    <text x="20" y="10" font-family="monospace" font-size="8" fill="#00F2FE">SYS.INIT // OK</text>
-  </g>
-  <g opacity="0.2" transform="translate(40, 260)">
-    <text x="0" y="10" font-family="monospace" font-size="9" fill="#9D4EDD">LATENCY: 14ms</text>
-    <text x="0" y="22" font-family="monospace" font-size="9" fill="#00F5D4">PACKETS: 100%</text>
-  </g>
-  
-  <!-- Left Side: Title and Typography -->
-  <g transform="translate(70, 115)">
-    <!-- Tech Tag -->
-    <rect x="0" y="-45" width="135" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
-    <text x="10" y="-31" font-family="monospace" font-size="10" font-weight="bold" fill="#00F5D4">NODE_STATUS: ACTIVE</text>
-    
-    <text class="title" x="0" y="15" filter="url(#neonGlow)">NIKHIL CHAPKANADE</text>
-    <text class="subtitle" x="0" y="52">AI Engineer • Building Autonomous Systems</text>
-    <text class="tagline" x="0" y="85">AGENTIC AI • REINFORCEMENT LEARNING • COMPUTATIONAL NEUROSCIENCE</text>
-  </g>
-  
-  <!-- Right Side: Neural Network Graph (Centered around 800, 160) -->
-  <g transform="translate(0, 0)">
-    <!-- Connections (Edges) -->
-    <!-- Background passive lines -->
-    <path d="M 720,160 L 800,80 L 880,110 L 880,210 L 800,240 L 720,160 Z" fill="none" stroke="#1e293b" stroke-width="1.5" />
-    <path d="M 720,160 L 780,160 L 850,160 L 880,110" fill="none" stroke="#1e293b" stroke-width="1" />
-    <path d="M 800,80 L 780,160 L 800,240" fill="none" stroke="#1e293b" stroke-width="1" />
-    <path d="M 800,80 L 850,160 L 800,240" fill="none" stroke="#1e293b" stroke-width="1" />
-    <path d="M 880,210 L 850,160" fill="none" stroke="#1e293b" stroke-width="1" />
-    
-    <!-- Active animated pulse lines -->
-    <path class="edge-active" d="M 720,160 L 800,80 L 880,110" fill="none" stroke="#00F2FE" stroke-width="2" filter="url(#subtleGlow)"/>
-    <path class="edge-active" d="M 720,160 L 780,160 L 850,160 L 880,210" fill="none" stroke="#9D4EDD" stroke-width="2" filter="url(#subtleGlow)" style="animation-duration: 3s; animation-direction: reverse;"/>
-    <path class="edge-active" d="M 800,240 L 850,160 L 800,80" fill="none" stroke="#00F5D4" stroke-width="1.5" filter="url(#subtleGlow)" style="animation-duration: 2.5s;"/>
-    <path class="edge-active" d="M 800,240 L 720,160" fill="none" stroke="#00F2FE" stroke-width="1.5" filter="url(#subtleGlow)" style="animation-duration: 4s;"/>
 
-    <!-- Synaptic Nodes -->
-    <!-- N1 (Cyan) -->
-    <g transform="translate(720, 160)">
-      <circle r="12" fill="#00F2FE" opacity="0.15" class="node-c"/>
-      <circle r="6" fill="#00F2FE" filter="url(#subtleGlow)"/>
-      <circle r="2" fill="#fff"/>
+  <!-- BACKGROUND & GRID -->
+  <rect width="1000" height="480" class="bg"/>
+  
+  <path class="grid" d="M 0,30 L 1000,30 M 0,60 L 1000,60 M 0,90 L 1000,90 M 0,120 L 1000,120 M 0,150 L 1000,150 M 0,180 L 1000,180 M 0,210 L 1000,210 M 0,240 L 1000,240 M 0,270 L 1000,270 M 0,300 L 1000,300 M 0,330 L 1000,330 M 0,360 L 1000,360 M 0,390 L 1000,390 M 0,420 L 1000,420 M 0,450 L 1000,450
+                     M 50,0 L 50,480 M 100,0 L 100,480 M 150,0 L 150,480 M 200,0 L 200,480 M 250,0 L 250,480 M 300,0 L 300,480 M 350,0 L 350,480 M 400,0 L 400,480 M 450,0 L 450,480 M 500,0 L 500,480 M 550,0 L 550,480 M 600,0 L 600,480 M 650,0 L 650,480 M 700,0 L 700,480 M 750,0 L 750,480 M 800,0 L 800,480 M 850,0 L 850,480 M 900,0 L 900,480 M 950,0 L 950,480"/>
+  
+  <!-- SCANLINE -->
+  <line class="scanner" x1="0" y1="0" x2="1000" y2="0"/>
+
+  <!-- ==================== HEADER HUD BAR ==================== -->
+  <g transform="translate(30, 15)">
+    <!-- Main Frame -->
+    <rect width="940" height="40" fill="#060914" stroke="#1e293b" stroke-width="1" rx="4"/>
+    <rect width="940" height="40" class="hud-border-glow"/>
+    <path d="M 10,20 L 20,10 M 930,20 L 920,10" stroke="#00F2FE" stroke-width="1.5"/>
+    
+    <!-- OS Labels -->
+    <text x="25" y="25" class="font-logo os-title">NEURO_AGENT_OS_v4.2</text>
+    <text x="470" y="26" class="font-logo os-subtitle" text-anchor="middle">COGNITIVE CORE MONITOR</text>
+    <text x="915" y="24" class="font-hud os-stats" text-anchor="end">SYS_STATUS: <tspan fill="#00F5D4">NOMINAL</tspan> // TEMP: <tspan fill="#ff007f">32°C</tspan></text>
+  </g>
+
+  <!-- ==================== LEFT PANEL: AGENT TERMINAL ==================== -->
+  <g transform="translate(30, 75)">
+    <rect width="280" height="375" class="hud-box"/>
+    <rect width="280" height="375" class="hud-border-glow"/>
+    
+    <!-- Title and corner tabs -->
+    <text x="20" y="30" class="font-logo panel-header">🤖 AGENT_TERMINAL_LOG</text>
+    <line x1="20" y1="42" x2="260" y2="42" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Bracket corners -->
+    <path d="M 8,8 L 8,20 M 8,8 L 20,8 M 272,8 L 272,20 M 272,8 L 260,8 M 8,367 L 8,355 M 8,367 L 20,367 M 272,367 L 272,355 M 272,367 L 260,367" stroke="#00F2FE" stroke-width="1"/>
+
+    <!-- Terminal Screen Panel -->
+    <rect x="15" y="55" width="250" height="240" fill="#03050a" stroke="#1e293b" stroke-width="1" rx="3"/>
+    
+    <!-- Scrolling log group -->
+    <g clip-path="url(#terminalClip)">
+      <g class="scrolling-log" transform="translate(25, 0)">
+        <!-- Set 1 -->
+        <text x="0" y="80" class="terminal-text">[SYS] INIT NEURAL_NODE_01 ... OK</text>
+        <text x="0" y="100" class="terminal-text">[SYS] CONNECTING TO OPENROUTER ...</text>
+        <text x="0" y="120" class="terminal-text">[SYS] HOST: api.openrouter.ai</text>
+        <text x="0" y="140" class="terminal-text">[DQN] EPISODE: 0105 // Q_LOSS: 0.0042</text>
+        <text x="0" y="160" class="terminal-text">[DQN] STEPS: 242 // REWARD: +100.0</text>
+        <text x="0" y="180" class="terminal-text">[MCP] TOOL CALL: quant_mind/get_stock</text>
+        <text x="0" y="200" class="terminal-text">[MCP] STOCK VALUE DECIDED: 142.5</text>
+        <text x="0" y="220" class="terminal-text">[SYS] AGENT ACTIONS RECORDED</text>
+        
+        <!-- Duplicate Set for looping -->
+        <text x="0" y="240" class="terminal-text">[SYS] INIT NEURAL_NODE_01 ... OK</text>
+        <text x="0" y="260" class="terminal-text">[SYS] CONNECTING TO OPENROUTER ...</text>
+        <text x="0" y="280" class="terminal-text">[SYS] HOST: api.openrouter.ai</text>
+        <text x="0" y="300" class="terminal-text">[DQN] EPISODE: 0105 // Q_LOSS: 0.0042</text>
+        <text x="0" y="320" class="terminal-text">[DQN] STEPS: 242 // REWARD: +100.0</text>
+        <text x="0" y="340" class="terminal-text">[MCP] TOOL CALL: quant_mind/get_stock</text>
+        <text x="0" y="360" class="terminal-text">[MCP] STOCK VALUE DECIDED: 142.5</text>
+        <text x="0" y="380" class="terminal-text">[SYS] AGENT ACTIONS RECORDED</text>
+      </g>
     </g>
-    <!-- N2 (Purple) -->
-    <g transform="translate(800, 80)">
-      <circle r="12" fill="#9D4EDD" opacity="0.15" class="node-p" style="animation-delay: -1s;"/>
-      <circle r="6" fill="#9D4EDD" filter="url(#subtleGlow)"/>
-      <circle r="2" fill="#fff"/>
-    </g>
-    <!-- N3 (Teal) -->
-    <g transform="translate(880, 110)">
-      <circle r="10" fill="#00F5D4" opacity="0.15" class="node-c" style="animation-delay: -2s;"/>
-      <circle r="5" fill="#00F5D4" filter="url(#subtleGlow)"/>
-      <circle r="1.5" fill="#fff"/>
-    </g>
-    <!-- N4 (Purple) -->
-    <g transform="translate(880, 210)">
-      <circle r="10" fill="#9D4EDD" opacity="0.15" class="node-p" style="animation-delay: -0.5s;"/>
-      <circle r="5" fill="#9D4EDD" filter="url(#subtleGlow)"/>
-      <circle r="1.5" fill="#fff"/>
-    </g>
-    <!-- N5 (Cyan) -->
-    <g transform="translate(800, 240)">
-      <circle r="12" fill="#00F2FE" opacity="0.15" class="node-c" style="animation-delay: -1.5s;"/>
-      <circle r="6" fill="#00F2FE" filter="url(#subtleGlow)"/>
-      <circle r="2" fill="#fff"/>
-    </g>
-    <!-- N6 (Teal) -->
-    <g transform="translate(780, 160)">
-      <circle r="8" fill="#00F5D4" opacity="0.15" class="node-c" style="animation-delay: -3s;"/>
-      <circle r="4" fill="#00F5D4" filter="url(#subtleGlow)"/>
-    </g>
-    <!-- N7 (Purple) -->
-    <g transform="translate(850, 160)">
-      <circle r="8" fill="#9D4EDD" opacity="0.15" class="node-p" style="animation-delay: -2.5s;"/>
-      <circle r="4" fill="#9D4EDD" filter="url(#subtleGlow)"/>
+
+    <!-- Subsystem Activity Meters -->
+    <g transform="translate(20, 310)">
+      <text x="0" y="10" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">CPU TENSOR LOAD</text>
+      <rect x="0" y="15" width="240" height="8" rx="2" fill="#04060c" stroke="#1e293b" stroke-width="0.5"/>
+      <rect x="1" y="16" width="150" height="6" rx="1.5" fill="#00F2FE" class="progress-bar-val-1"/>
+      
+      <text x="0" y="38" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">GPU FLOPS ALLOCATION</text>
+      <rect x="0" y="43" width="240" height="8" rx="2" fill="#04060c" stroke="#1e293b" stroke-width="0.5"/>
+      <rect x="1" y="44" width="180" height="6" rx="1.5" fill="#9D4EDD" class="progress-bar-val-2"/>
     </g>
   </g>
-  
-  <!-- Outer glowing border -->
-  <rect x="2" y="2" width="996" height="316" rx="8" fill="none" stroke="#1e293b" stroke-width="1" />
-  <rect x="2" y="2" width="996" height="316" rx="8" fill="none" stroke="#00F2FE" stroke-width="1.5" opacity="0.2" filter="url(#subtleGlow)"/>
+
+  <!-- ==================== CENTER PANEL: HOLOGRAPHIC CORE ==================== -->
+  <g transform="translate(330, 75)">
+    <rect width="340" height="375" class="hud-box"/>
+    <rect width="340" height="375" class="hud-border-glow"/>
+    
+    <text x="20" y="30" class="font-logo panel-header">🧠 COGNITIVE_REASONING_CORE</text>
+    <line x1="20" y1="42" x2="320" y2="42" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Bracket corners -->
+    <path d="M 8,8 L 8,20 M 8,8 L 20,8 M 332,8 L 332,20 M 332,8 L 320,8 M 8,367 L 8,355 M 8,367 L 20,367 M 332,367 L 332,355 M 332,367 L 320,367" stroke="#9D4EDD" stroke-width="1"/>
+
+    <!-- Inner Core Telemetry (Double dials spinning) -->
+    <!-- Dial 1 (CW) -->
+    <g class="rotate-cw">
+      <circle cx="500" cy="255" r="110" fill="none" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="500" cy="255" r="105" fill="none" stroke="#00F2FE" stroke-width="1.5" stroke-dasharray="10 25" opacity="0.3"/>
+      <circle cx="500" cy="255" r="95" fill="none" stroke="#9D4EDD" stroke-width="1" stroke-dasharray="2 15" opacity="0.5"/>
+    </g>
+    
+    <!-- Dial 2 (CCW) -->
+    <g class="rotate-ccw">
+      <circle cx="500" cy="255" r="80" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="5 5"/>
+      <circle cx="500" cy="255" r="75" fill="none" stroke="#00F5D4" stroke-width="2" stroke-dasharray="20 40" opacity="0.4"/>
+    </g>
+    
+    <!-- 3D Neural Sphere wireframe -->
+    <g class="sphere-core">
+      <!-- Outer mesh ellipses (Vertical channels) -->
+      <ellipse cx="500" cy="255" rx="60" ry="60" fill="none" stroke="#00F2FE" stroke-width="1" stroke-dasharray="5 3" opacity="0.4"/>
+      <ellipse cx="500" cy="255" rx="42" ry="60" fill="none" stroke="#9D4EDD" stroke-width="1" opacity="0.4"/>
+      <ellipse cx="500" cy="255" rx="20" ry="60" fill="none" stroke="#00F5D4" stroke-width="1" opacity="0.4"/>
+      <line x1="500" y1="195" x2="500" y2="315" stroke="#1e293b" stroke-width="1" opacity="0.4"/>
+      
+      <!-- Horizontal channels -->
+      <ellipse cx="500" cy="255" rx="60" ry="20" fill="none" stroke="#00F2FE" stroke-width="1" opacity="0.4"/>
+      <ellipse cx="500" cy="255" rx="60" ry="42" fill="none" stroke="#9D4EDD" stroke-width="1" opacity="0.4"/>
+      <ellipse cx="500" cy="255" rx="60" ry="5" fill="none" stroke="#00F5D4" stroke-width="1" stroke-dasharray="5 3" opacity="0.4"/>
+
+      <!-- Nodes (Glow nodes that travel/pulse in 3D perspective) -->
+      <g transform="translate(500, 255)">
+        <circle cx="-60" cy="0" r="3" fill="#00F2FE" filter="url(#glow-cyan)"/>
+        <circle cx="60" cy="0" r="3" fill="#00F2FE" filter="url(#glow-cyan)"/>
+        <circle cx="0" cy="-60" r="3" fill="#9D4EDD" filter="url(#glow-violet)"/>
+        <circle cx="0" cy="60" r="3" fill="#9D4EDD" filter="url(#glow-violet)"/>
+        <circle cx="-42" cy="-42" r="2.5" fill="#00F5D4" filter="url(#glow-cyan)"/>
+        <circle cx="42" cy="42" r="2.5" fill="#00F5D4" filter="url(#glow-cyan)"/>
+        <circle cx="-42" cy="42" r="2.5" fill="#FF007F" filter="url(#glow-pink)"/>
+        <circle cx="42" cy="-42" r="2.5" fill="#FF007F" filter="url(#glow-pink)"/>
+        <circle cx="0" cy="0" r="4.5" fill="#fff" filter="url(#glow-cyan)"/>
+      </g>
+    </g>
+
+    <!-- Bottom Readout parameters -->
+    <g transform="translate(20, 310)">
+      <rect x="0" y="0" width="300" height="45" fill="#04060c" stroke="#1e293b" stroke-width="0.5" rx="3"/>
+      
+      <text x="15" y="20" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">DECISION_INTERVAL: <tspan fill="#e2e8f0">4ms</tspan></text>
+      <text x="15" y="33" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">POLICY_STABILIZATION: <tspan fill="#00F5D4">99.8%</tspan></text>
+      <text x="170" y="20" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">ACTIVE_SYNAPSES: <tspan fill="#9D4EDD">1.4K</tspan></text>
+      <text x="170" y="33" class="font-hud label" fill="#64748b" font-size="9" font-weight="700">CORTICAL_BLOCKS: <tspan fill="#FF007F">32</tspan></text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT PANEL: fMRI WAVE DECODERS ==================== -->
+  <g transform="translate(690, 75)">
+    <rect width="280" height="375" class="hud-box"/>
+    <rect width="280" height="375" class="hud-border-glow"/>
+    
+    <text x="20" y="30" class="font-logo panel-header">📊 fMRI_WAVE_DECODERS</text>
+    <line x1="20" y1="42" x2="260" y2="42" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Bracket corners -->
+    <path d="M 8,8 L 8,20 M 8,8 L 20,8 M 272,8 L 272,20 M 272,8 L 260,8 M 8,367 L 8,355 M 8,367 L 20,367 M 272,367 L 272,355 M 272,367 L 260,367" stroke="#FF007F" stroke-width="1"/>
+
+    <!-- Oscilloscopes -->
+    <!-- Channel 1 -->
+    <g transform="translate(15, 55)">
+      <rect width="250" height="65" fill="#03050a" stroke="#1e293b" stroke-width="1" rx="3"/>
+      <text x="10" y="15" class="font-hud label" fill="#64748b" font-size="8" font-weight="700">VISUAL CORTEX (CH1)</text>
+      
+      <!-- Flowing Sine Path -->
+      <path d="M 10,35 Q 25,10 40,35 T 70,35 T 100,35 T 130,35 T 160,35 T 190,35 T 220,35 T 240,35" fill="none" class="wave-c"/>
+    </g>
+    
+    <!-- Channel 2 -->
+    <g transform="translate(15, 130)">
+      <rect width="250" height="65" fill="#03050a" stroke="#1e293b" stroke-width="1" rx="3"/>
+      <text x="10" y="15" class="font-hud label" fill="#64748b" font-size="8" font-weight="700">PREFRONTAL REASONING (CH2)</text>
+      
+      <!-- Flowing Sine Path -->
+      <path d="M 10,35 Q 25,15 40,35 T 70,35 T 100,35 T 130,35 T 160,35 T 190,35 T 220,35 T 240,35" fill="none" class="wave-v"/>
+    </g>
+    
+    <!-- Channel 3 -->
+    <g transform="translate(15, 205)">
+      <rect width="250" height="65" fill="#03050a" stroke="#1e293b" stroke-width="1" rx="3"/>
+      <text x="10" y="15" class="font-hud label" fill="#64748b" font-size="8" font-weight="700">SWARM COORDINATOR (CH3)</text>
+      
+      <!-- Flowing Sine Path -->
+      <path d="M 10,35 Q 25,20 40,35 T 70,35 T 100,35 T 130,35 T 160,35 T 190,35 T 220,35 T 240,35" fill="none" class="wave-p"/>
+    </g>
+
+    <!-- Cognitive lobes statuses -->
+    <g transform="translate(20, 285)">
+      <!-- Lobe 1 -->
+      <g transform="translate(0, 10)">
+        <circle cx="5" cy="-3" r="3" fill="#00F5D4" filter="url(#glow-cyan)"/>
+        <text x="15" y="1" class="font-hud tech-text" font-size="10">OCCIPITAL: <tspan fill="#00F5D4" font-weight="bold">ACTIVE (EEG OK)</tspan></text>
+      </g>
+      <!-- Lobe 2 -->
+      <g transform="translate(0, 26)">
+        <circle cx="5" cy="-3" r="3" fill="#9D4EDD" filter="url(#glow-violet)"/>
+        <text x="15" y="1" class="font-hud tech-text" font-size="10">FRONTAL: <tspan fill="#9D4EDD" font-weight="bold">PROCESSING (DQN)</tspan></text>
+      </g>
+      <!-- Lobe 3 -->
+      <g transform="translate(0, 42)">
+        <circle cx="5" cy="-3" r="3" fill="#FF007F" filter="url(#glow-pink)"/>
+        <text x="15" y="1" class="font-hud tech-text" font-size="10">TEMPORAL: <tspan fill="#FF007F" font-weight="bold">RAG DECODING</tspan></text>
+      </g>
+    </g>
+  </g>
 </svg>
