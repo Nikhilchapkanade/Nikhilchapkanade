@@ -44,63 +44,69 @@ I am an **AI/ML Engineer** dedicated to building autonomous systems that perceiv
   <tr>
     <td width="50%" valign="top">
       <h3>🧠 <a href="https://github.com/Nikhilchapkanade/NeuroPrism">NeuroPrism</a></h3>
-      <p>Real-time cinematic neurofeedback dashboard. Generates fMRI-grade 3D cortical heatmaps synchronized with video playback using <b>Meta TRIBEv2</b> and AI scene analysis.</p>
+      <p>Cinematic real-time neurofeedback dashboard. Renders fMRI-grade 3D cortical heatmaps synchronized with dynamic video playback using <b>Meta TRIBEv2</b> and multimodal AI scene comprehension.</p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
         <img src="https://img.shields.io/badge/Meta_TRIBEv2-00F5D4?style=flat-square&logoColor=black"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/NeuroPrism"><b>View Repository ↗</b></a></p>
     </td>
     <td width="50%" valign="top">
       <h3>🎯 <a href="https://github.com/Nikhilchapkanade/INTERCEPTOR">INTERCEPTOR</a></h3>
-      <p>Autonomous 5-layer swarm defense architecture. Coordinates interceptor drones using deep reinforcement learning, Kafka streaming, and LangGraph supervisor agents.</p>
+      <p>Autonomous 5-layer swarm defense architecture. Coordinates autonomous interceptor drones in complex vector fields using deep reinforcement learning, Apache Kafka streaming, and LangGraph supervisors.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
         <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white"/>
         <img src="https://img.shields.io/badge/Gymnasium-000000?style=flat-square&logo=openaigym&logoColor=white"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/INTERCEPTOR"><b>View Repository ↗</b></a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>📄 <a href="https://github.com/Nikhilchapkanade/Paper-Prover">Paper-Prover</a></h3>
-      <p>Adversarial AI research auditor. Orchestrates competing LLM agents that rigorously debate every claim in a paper to surface inflated results and contradictions.</p>
+      <p>Adversarial AI research auditor. Orchestrates competing LLM agents that critically debate research paper claims to surface unverified assumptions, statistical flaws, and inflated metrics.</p>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
         <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
         <img src="https://img.shields.io/badge/AI_Debate-7C3AED?style=flat-square&logo=openai&logoColor=white"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/Paper-Prover"><b>View Repository ↗</b></a></p>
     </td>
     <td width="50%" valign="top">
       <h3>📈 <a href="https://github.com/Nikhilchapkanade/quant-mind">quant-mind</a></h3>
-      <p>Financial intelligence agent running deep learning stock price forecasting, deployed natively as a Model Context Protocol (MCP) server inside Claude Desktop.</p>
+      <p>Financial intelligence agent running deep learning stock price prediction, deployed natively as a Model Context Protocol (MCP) server inside Claude Desktop for zero-friction tool usage.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/MCP-00F2FE?style=flat-square&logo=anthropic&logoColor=black"/>
         <img src="https://img.shields.io/badge/Deep_Learning-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/quant-mind"><b>View Repository ↗</b></a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🎨 <a href="https://github.com/Nikhilchapkanade/ClaudeVision">ClaudeVision</a></h3>
-      <p>Serverless zero-GPU bridge connecting Claude Desktop to ComfyUI workflows, enabling high-fidelity on-demand AI image generation in chat.</p>
+      <p>Serverless zero-GPU bridge connecting Claude Desktop to cloud ComfyUI pipelines, enabling high-fidelity on-demand AI image generation and editing directly in chat workflows.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/MCP-D97706?style=flat-square&logo=anthropic&logoColor=white"/>
         <img src="https://img.shields.io/badge/ComfyUI-10B981?style=flat-square&logo=visualstudiocode&logoColor=white"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/ClaudeVision"><b>View Repository ↗</b></a></p>
     </td>
     <td width="50%" valign="top">
       <h3>🧬 <a href="https://github.com/Nikhilchapkanade/Skill-LLM">Skill-LLM</a></h3>
-      <p>Multi-task specialization framework that dynamically hot-swaps low-rank adaptation (LoRA) weights across domains without model restarts.</p>
+      <p>Dynamic multi-task specialization framework that hot-swaps low-rank adaptation (LoRA) weights across domains (mathematics, reasoning, programming) on the fly without model downtime.</p>
       <p>
         <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
         <img src="https://img.shields.io/badge/LoRA-6366F1?style=flat-square&logo=huggingface&logoColor=white"/>
         <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
       </p>
+      <p>🔗 <a href="https://github.com/Nikhilchapkanade/Skill-LLM"><b>View Repository ↗</b></a></p>
     </td>
   </tr>
 </table>
