@@ -14,7 +14,7 @@
 
 ### ✦ About Me
 
-I am an **AI/ML Engineer** dedicated to building autonomous systems that perceive, reason, and act. My work focuses on **Multi-Agent Orchestration (LangGraph & MCP)**, **Deep Reinforcement Learning**, and **Computational Neuroscience** — translating complex cognitive architectures into production-grade systems.
+I am an **AI/ML Engineer** dedicated to building autonomous systems that perceive, reason, and act. My work focuses on **Multi-Agent Orchestration (LangGraph & MCP)**, **Deep Reinforcement Learning** — translating complex cognitive architectures into production-grade systems.
 
 <table>
   <tr>
