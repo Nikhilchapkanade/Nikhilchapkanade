@@ -153,8 +153,9 @@
   <rect width="950" height="210" rx="12" fill="url(#cyanAura)"/>
   <rect width="950" height="210" rx="12" fill="url(#violetAura)"/>
 
-  <!-- Minimal Border -->
+  <!-- Minimal Border & Top Accent Line -->
   <rect x="0.75" y="0.75" width="948.5" height="208.5" rx="11.25" fill="none" stroke="#1E293B" stroke-width="1.2" opacity="0.7"/>
+  <line x1="60" y1="1" x2="360" y2="1" stroke="url(#accentGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.75" filter="url(#softGlow)"/>
 
   <!-- Subtle Minimal Grid Pattern (Right Half) -->
   <g opacity="0.08" stroke="#94A3B8" stroke-width="0.5">
