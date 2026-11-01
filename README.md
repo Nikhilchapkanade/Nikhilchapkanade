@@ -168,6 +168,7 @@ I am an **AI/ML Engineer** dedicated to building autonomous systems that perceiv
 
 <p align="center">
   <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Nikhilchapkanade&theme=github_dark&hide_border=false&border_color=1E293B&bg_color=080B12&title_color=38BDF8&text_color=94A3B8&layout=compact&langs_count=8" width="48.5%" alt="Top Languages"/>
+  <img src="https://leetcard.jacoblin.cool/nikhilchapkanade?theme=dark&font=Inter" width="48.5%" alt="Nikhil's LeetCode Stats"/>
 </p>
 
 ---
