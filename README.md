@@ -156,12 +156,12 @@ I am an **AI/ML Engineer** dedicated to building autonomous systems that perceiv
 ### ✦ Activity &amp; Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilchapkanade&theme=github_dark&hide_border=false&border_color=1E293B&bg_color=080B12&title_color=38BDF8&icon_color=818CF8&text_color=94A3B8&include_all_commits=true&count_private=true&show_icons=true" width="48.5%"/>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Nikhilchapkanade&theme=dark&hide_border=false&border=1E293B&background=080B12&ring=818CF8&fire=38BDF8&currStreakNum=38BDF8" width="48.5%"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=Nikhilchapkanade&theme=github_dark&hide_border=false&border_color=1E293B&bg_color=080B12&title_color=38BDF8&icon_color=818CF8&text_color=94A3B8&include_all_commits=true&count_private=true&show_icons=true" width="48.5%" alt="Nikhil's GitHub Stats"/>
+  <img src="https://streak-stats.demolab.com/?user=Nikhilchapkanade&theme=dark&hide_border=false&border=1E293B&background=080B12&ring=818CF8&fire=38BDF8&currStreakNum=38BDF8" width="48.5%" alt="Nikhil's GitHub Streak"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilchapkanade&theme=github_dark&hide_border=false&border_color=1E293B&bg_color=080B12&title_color=38BDF8&text_color=94A3B8&layout=compact&langs_count=8" width="48.5%"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Nikhilchapkanade&theme=github_dark&hide_border=false&border_color=1E293B&bg_color=080B12&title_color=38BDF8&text_color=94A3B8&layout=compact&langs_count=8" width="48.5%" alt="Top Languages"/>
 </p>
 
 ---
