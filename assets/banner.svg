@@ -1,356 +1,243 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 210" width="100%" height="100%">
   <defs>
-    <!-- Premium Glow Filters -->
-    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="glow-violet" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="glow-pink" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Deep Background Gradients -->
+    <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#020409"/>
-      <stop offset="50%" stop-color="#070c1e"/>
-      <stop offset="100%" stop-color="#030510"/>
+      <stop offset="0%" stop-color="#080B12"/>
+      <stop offset="50%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#06090E"/>
     </linearGradient>
 
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F2FE"/>
-      <stop offset="35%" stop-color="#00F5D4"/>
-      <stop offset="70%" stop-color="#9D4EDD"/>
-      <stop offset="100%" stop-color="#FF007F"/>
-    </linearGradient>
-
-    <radialGradient id="coreAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.5"/>
-      <stop offset="45%" stop-color="#9D4EDD" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#020409" stop-opacity="0"/>
+    <!-- Subtle Ambient Glows -->
+    <radialGradient id="cyanAura" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#6366F1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Clip Paths -->
-    <clipPath id="terminalClip">
-      <rect x="40" y="145" width="260" height="235"/>
-    </clipPath>
+    <radialGradient id="violetAura" cx="20%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+    </radialGradient>
 
-    <!-- Synaptic Motion Paths -->
-    <path id="synapsePath1" d="M 440,260 Q 500,180 560,260 Q 500,340 440,260 Z" fill="none"/>
-    <path id="synapsePath2" d="M 500,200 Q 580,280 500,360 Q 420,280 500,200 Z" fill="none"/>
-    <path id="synapsePath3" d="M 430,285 Q 500,360 570,285 Q 500,210 430,285 Z" fill="none"/>
+    <!-- Typographic Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Wave Gradients -->
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#2DD4BF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
-    <![CDATA[
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Orbitron:wght@700;900&family=Fira+Code:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
 
-    .bg { fill: url(#bgGrad); }
-    .grid-line { fill: none; stroke: #1e293b; stroke-width: 0.5; opacity: 0.15; }
-
-    .hud-box { fill: #050914; fill-opacity: 0.88; stroke: #1e293b; stroke-width: 1.2; rx: 8px; }
-    .hud-glow { fill: none; stroke: #00F2FE; stroke-opacity: 0.2; stroke-width: 1.5; rx: 8px; filter: url(#glow-cyan); }
-
-    .font-hud { font-family: 'Space Grotesk', sans-serif; }
-    .font-orbitron { font-family: 'Orbitron', sans-serif; }
-    .font-code { font-family: 'Fira Code', monospace; }
-
-    .name-title { font-size: 24px; font-weight: 900; fill: url(#titleGrad); letter-spacing: 3px; filter: url(#glow-cyan); }
-    .name-sub { font-size: 10.5px; font-weight: 600; fill: #94a3b8; letter-spacing: 1.5px; }
-
-    .os-label { font-size: 10px; font-weight: 900; fill: #00F5D4; letter-spacing: 1.5px; }
-    .os-status { font-size: 9.5px; font-weight: 600; fill: #64748b; }
-
-    .panel-header { font-size: 11px; font-weight: 700; fill: #00F2FE; letter-spacing: 1.2px; }
-
-    @keyframes matrix-rain {
-      0% { transform: translateY(-80px); opacity: 0.15; }
-      50% { opacity: 0.7; }
-      100% { transform: translateY(280px); opacity: 0.05; }
+    .title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 2px;
+      fill: url(#textGrad);
     }
-    .rain-txt-1 { animation: matrix-rain 6s linear infinite; }
-    .rain-txt-2 { animation: matrix-rain 8s linear infinite 2s; }
 
-    @keyframes scroll-log {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-180px); }
+    .tagline {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 13.5px;
+      letter-spacing: 0.5px;
+      fill: #94A3B8;
     }
-    .scrolling-log { animation: scroll-log 16s linear infinite; }
 
-    @keyframes rotate-cw {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .sub-tags {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      fill: #64748B;
     }
-    .spin-cw { animation: rotate-cw 22s linear infinite; transform-origin: 500px 260px; }
-    .spin-cw-fast { animation: rotate-cw 11s linear infinite; transform-origin: 500px 260px; }
 
-    @keyframes rotate-ccw {
-      0% { transform: rotate(360deg); }
-      100% { transform: rotate(0deg); }
+    .status-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 9.5px;
+      letter-spacing: 1.2px;
+      fill: #34D399;
     }
-    .spin-ccw { animation: rotate-ccw 16s linear infinite; transform-origin: 500px 260px; }
 
-    @keyframes pulse-core {
-      0%, 100% { transform: scale(1); opacity: 0.7; }
-      50% { transform: scale(1.15); opacity: 1; filter: url(#glow-cyan); }
+    /* Subtle Elegant Wave Animations */
+    @keyframes waveFloat1 {
+      0%, 100% { transform: translateY(0px) scaleY(1); }
+      50% { transform: translateY(-7px) scaleY(1.06); }
     }
-    .core-pulse { animation: pulse-core 4s ease-in-out infinite; transform-origin: 500px 260px; }
 
-    @keyframes radar-sweep {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes waveFloat2 {
+      0%, 100% { transform: translateY(0px) scaleY(1); }
+      50% { transform: translateY(8px) scaleY(0.94); }
     }
-    .sweep-line { animation: radar-sweep 5s linear infinite; transform-origin: 830px 175px; }
 
-    @keyframes blip-flash {
-      0%, 70%, 100% { opacity: 0.2; r: 2px; }
-      35% { opacity: 1; r: 4.5px; fill: #FF007F; filter: url(#glow-pink); }
+    @keyframes waveFloat3 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
     }
-    .radar-blip { animation: blip-flash 5s infinite; }
 
-    @keyframes wave-offset {
-      0% { stroke-dashoffset: 280; }
-      100% { stroke-dashoffset: 0; }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
-    .wave-alpha { stroke: #00F2FE; stroke-width: 1.8; stroke-dasharray: 40 10; animation: wave-offset 4s linear infinite; filter: url(#glow-cyan); }
-    .wave-beta { stroke: #9D4EDD; stroke-width: 1.8; stroke-dasharray: 30 15; animation: wave-offset 6s linear infinite; filter: url(#glow-violet); }
-    .wave-gamma { stroke: #00F5D4; stroke-width: 1.8; stroke-dasharray: 20 20; animation: wave-offset 3s linear infinite; filter: url(#glow-gold); }
 
-    @keyframes meter-grow {
-      0%, 100% { width: 45%; }
-      50% { width: 88%; }
+    @keyframes dashCycle {
+      to { stroke-dashoffset: -120; }
     }
-    @keyframes meter-grow-2 {
-      0%, 100% { width: 80%; }
-      50% { width: 55%; }
-    }
-    .meter-val-1 { animation: meter-grow 4s ease-in-out infinite; }
-    .meter-val-2 { animation: meter-grow-2 5s ease-in-out infinite; }
 
-    @keyframes scan-line-anim {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(560px); }
+    .wave-1 {
+      animation: waveFloat1 7s ease-in-out infinite;
+      transform-origin: 750px 105px;
     }
-    .scan-line { stroke: #00F2FE; stroke-width: 0.5; opacity: 0.05; animation: scan-line-anim 8s linear infinite; }
-    ]]>
+
+    .wave-2 {
+      animation: waveFloat2 9s ease-in-out infinite;
+      transform-origin: 750px 105px;
+    }
+
+    .wave-3 {
+      animation: waveFloat3 11s ease-in-out infinite;
+      transform-origin: 750px 105px;
+    }
+
+    .live-dot {
+      animation: pulseDot 2.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .pulse-flow {
+      stroke-dasharray: 6 14;
+      animation: dashCycle 8s linear infinite;
+    }
   </style>
 
-  <!-- Background Layer -->
-  <rect width="1000" height="560" class="bg"/>
+  <!-- Background -->
+  <rect width="950" height="210" rx="12" fill="url(#bgGrad)"/>
+  <rect width="950" height="210" rx="12" fill="url(#cyanAura)"/>
+  <rect width="950" height="210" rx="12" fill="url(#violetAura)"/>
 
-  <!-- Matrix Grid -->
-  <path class="grid-line" d="M 0,40 L 1000,40 M 0,80 L 1000,80 M 0,120 L 1000,120 M 0,160 L 1000,160 M 0,200 L 1000,200 M 0,240 L 1000,240 M 0,280 L 1000,280 M 0,320 L 1000,320 M 0,360 L 1000,360 M 0,400 L 1000,400 M 0,440 L 1000,440 M 0,480 L 1000,480 M 0,520 L 1000,520
-                          M 60,0 L 60,560 M 120,0 L 120,560 M 180,0 L 180,560 M 240,0 L 240,560 M 300,0 L 300,560 M 360,0 L 360,560 M 420,0 L 420,560 M 480,0 L 480,560 M 540,0 L 540,560 M 600,0 L 600,560 M 660,0 L 660,560 M 720,0 L 720,560 M 780,0 L 780,560 M 840,0 L 840,560 M 900,0 L 900,560 M 960,0 L 960,560"/>
+  <!-- Minimal Border -->
+  <rect x="0.75" y="0.75" width="948.5" height="208.5" rx="11.25" fill="none" stroke="#1E293B" stroke-width="1.2" opacity="0.7"/>
 
-  <!-- CRT Scanline -->
-  <line class="scan-line" x1="0" y1="0" x2="1000" y2="0"/>
-
-  <!-- ==================== TOP COMMAND HEADER ==================== -->
-  <g transform="translate(30, 15)">
-    <rect width="940" height="66" fill="#040814" stroke="#1e293b" stroke-width="1.2" rx="6"/>
-    <rect width="940" height="66" class="hud-glow"/>
-    <path d="M 12,33 L 24,15 M 928,33 L 916,15" stroke="#00F2FE" stroke-width="1.5"/>
-
-    <!-- Left Badge -->
-    <text x="24" y="32" class="font-orbitron os-label">Q-NOS v9.0</text>
-    <text x="24" y="48" class="font-hud os-status">ARCH: <tspan fill="#00F5D4">NEURAL MATRIX</tspan></text>
-
-    <!-- Center Title & Subtitle (No overlap possible!) -->
-    <text x="470" y="34" class="font-orbitron name-title" text-anchor="middle">NIKHIL CHAPKANADE</text>
-    <text x="470" y="52" class="font-hud name-sub" text-anchor="middle">AUTONOMOUS AGENTS • REINFORCEMENT LEARNING • COMPUTATIONAL NEUROSCIENCE</text>
-
-    <!-- Right Live Telemetry -->
-    <text x="916" y="32" class="font-code os-status" text-anchor="end">THROUGHPUT: <tspan fill="#00F5D4">98.4 TFLOPS</tspan></text>
-    <text x="916" y="48" class="font-code os-status" text-anchor="end">STATE: <tspan fill="#00F2FE">ACTIVE</tspan></text>
+  <!-- Subtle Minimal Grid Pattern (Right Half) -->
+  <g opacity="0.08" stroke="#94A3B8" stroke-width="0.5">
+    <line x1="580" y1="0" x2="580" y2="210"/>
+    <line x1="660" y1="0" x2="660" y2="210"/>
+    <line x1="740" y1="0" x2="740" y2="210"/>
+    <line x1="820" y1="0" x2="820" y2="210"/>
+    <line x1="900" y1="0" x2="900" y2="210"/>
+    <line x1="500" y1="42" x2="950" y2="42"/>
+    <line x1="500" y1="84" x2="950" y2="84"/>
+    <line x1="500" y1="126" x2="950" y2="126"/>
+    <line x1="500" y1="168" x2="950" y2="168"/>
   </g>
 
-  <!-- ==================== LEFT PANEL: MATRIX TERMINAL ==================== -->
-  <g transform="translate(30, 95)">
-    <rect width="280" height="445" class="hud-box"/>
-    <rect width="280" height="445" class="hud-glow"/>
-
-    <!-- Title -->
-    <text x="20" y="28" class="font-orbitron panel-header">⚡ TERMINAL &amp; TENSOR MATRIX</text>
-    <line x1="20" y1="38" x2="260" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Terminal Screen Window -->
-    <rect x="15" y="50" width="250" height="245" fill="#02050c" stroke="#1e293b" stroke-width="1" rx="4"/>
-
-    <!-- Matrix Rain Effect -->
-    <g font-family="monospace" font-size="9" fill="#00F5D4" opacity="0.22">
-      <text x="25" y="0" class="rain-txt-1">101010110</text>
-      <text x="85" y="0" class="rain-txt-2">011010010</text>
-      <text x="145" y="0" class="rain-txt-1">110100101</text>
-      <text x="205" y="0" class="rain-txt-2">001011010</text>
-    </g>
-
-    <!-- Scrolling Execution Log -->
-    <g clip-path="url(#terminalClip)">
-      <g class="scrolling-log" transform="translate(25, -20)">
-        <text x="0" y="80" class="font-code" font-size="8.8" fill="#38bdf8">[SYS] INIT Q-NOS KERNEL v9.0</text>
-        <text x="0" y="100" class="font-code" font-size="8.8" fill="#00F5D4">[RL] LOAD ENV: GridWorld-v5</text>
-        <text x="0" y="120" class="font-code" font-size="8.8" fill="#e2e8f0">[DQN] POLICY_LOSS: 0.0014</text>
-        <text x="0" y="140" class="font-code" font-size="8.8" fill="#9D4EDD">[MCP] ROUTE: quant-mind/predict</text>
-        <text x="0" y="160" class="font-code" font-size="8.8" fill="#00F2FE">[AGENT] INTERCEPTOR ACTIVE</text>
-        <text x="0" y="180" class="font-code" font-size="8.8" fill="#ff007f">[NEURO] fMRI SYNAPSE: 99.8%</text>
-        <text x="0" y="200" class="font-code" font-size="8.8" fill="#ffd700">[VISION] YOLO26 TRACKING: ON</text>
-        <text x="0" y="220" class="font-code" font-size="8.8" fill="#38bdf8">[SYS] PIPELINE RUNNING STABLE</text>
-
-        <!-- Loop Duplicate -->
-        <text x="0" y="260" class="font-code" font-size="8.8" fill="#38bdf8">[SYS] INIT Q-NOS KERNEL v9.0</text>
-        <text x="0" y="280" class="font-code" font-size="8.8" fill="#00F5D4">[RL] LOAD ENV: GridWorld-v5</text>
-        <text x="0" y="300" class="font-code" font-size="8.8" fill="#e2e8f0">[DQN] POLICY_LOSS: 0.0014</text>
-        <text x="0" y="320" class="font-code" font-size="8.8" fill="#9D4EDD">[MCP] ROUTE: quant-mind/predict</text>
-        <text x="0" y="340" class="font-code" font-size="8.8" fill="#00F2FE">[AGENT] INTERCEPTOR ACTIVE</text>
-        <text x="0" y="360" class="font-code" font-size="8.8" fill="#ff007f">[NEURO] fMRI SYNAPSE: 99.8%</text>
-      </g>
-    </g>
-
-    <!-- Subsystem Load Meters -->
-    <g transform="translate(20, 310)">
-      <text x="0" y="10" class="font-hud" font-size="8.5" font-weight="700" fill="#64748b">AGENTIC POLICY CONVERGENCE</text>
-      <rect x="0" y="15" width="240" height="7" rx="2" fill="#030611" stroke="#1e293b" stroke-width="0.5"/>
-      <rect x="1" y="16" width="160" height="5" rx="1.5" fill="#00F2FE" class="meter-val-1"/>
-
-      <text x="0" y="38" class="font-hud" font-size="8.5" font-weight="700" fill="#64748b">NEURAL MEMORY ALLOCATION</text>
-      <rect x="0" y="43" width="240" height="7" rx="2" fill="#030611" stroke="#1e293b" stroke-width="0.5"/>
-      <rect x="1" y="44" width="190" height="5" rx="1.5" fill="#9D4EDD" class="meter-val-2"/>
-
-      <text x="0" y="66" class="font-hud" font-size="8.5" font-weight="700" fill="#64748b">REINFORCEMENT REWARD RATE</text>
-      <rect x="0" y="71" width="240" height="7" rx="2" fill="#030611" stroke="#1e293b" stroke-width="0.5"/>
-      <rect x="1" y="72" width="220" height="5" rx="1.5" fill="#00F5D4"/>
-    </g>
-  </g>
-
-  <!-- ==================== CENTER PANEL: 3D HOLOGRAPHIC CORE ==================== -->
-  <g transform="translate(330, 95)">
-    <rect width="340" height="445" class="hud-box"/>
-    <rect width="340" height="445" class="hud-glow"/>
-
-    <text x="20" y="28" class="font-orbitron panel-header">⚛️ QUANTUM NEURAL HYPER-CORE</text>
-    <line x1="20" y1="38" x2="320" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Radial Core Aura -->
-    <circle cx="500" cy="260" r="135" fill="url(#coreAura)"/>
-
-    <!-- Outer Concentric Dials & Rings -->
-    <g class="spin-cw">
-      <circle cx="500" cy="260" r="120" fill="none" stroke="#1e293b" stroke-width="1"/>
-      <circle cx="500" cy="260" r="115" fill="none" stroke="#00F2FE" stroke-width="1.8" stroke-dasharray="15 35" opacity="0.5"/>
-      <circle cx="500" cy="260" r="105" fill="none" stroke="#9D4EDD" stroke-width="1.2" stroke-dasharray="5 20" opacity="0.6"/>
-    </g>
-
-    <g class="spin-ccw">
-      <circle cx="500" cy="260" r="90" fill="none" stroke="#00F5D4" stroke-width="2" stroke-dasharray="25 45" opacity="0.6"/>
-      <circle cx="500" cy="260" r="80" fill="none" stroke="#FF007F" stroke-width="1" stroke-dasharray="4 12" opacity="0.5"/>
-    </g>
-
-    <g class="spin-cw-fast">
-      <circle cx="500" cy="260" r="60" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="30 30" opacity="0.7"/>
-    </g>
-
-    <!-- SMIL Synaptic Energy Particles -->
-    <circle r="4" fill="#00F2FE" filter="url(#glow-cyan)">
-      <mpath href="#synapsePath1"/>
-      <animateMotion dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="4" fill="#9D4EDD" filter="url(#glow-violet)">
-      <mpath href="#synapsePath2"/>
-      <animateMotion dur="4.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="4.5" fill="#00F5D4" filter="url(#glow-cyan)">
-      <mpath href="#synapsePath3"/>
-      <animateMotion dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Central Quantum Singularity -->
-    <circle cx="500" cy="260" r="28" fill="#00F2FE" opacity="0.3" class="core-pulse"/>
-    <circle cx="500" cy="260" r="15" fill="#00F5D4" filter="url(#glow-cyan)"/>
-    <circle cx="500" cy="260" r="5.5" fill="#ffffff"/>
-
-    <!-- Bottom Telemetry Readout Grid (Immaculate bounds inside card) -->
-    <g transform="translate(20, 355)">
-      <rect x="0" y="0" width="300" height="68" fill="#030611" stroke="#1e293b" stroke-width="0.8" rx="4"/>
-
-      <text x="12" y="20" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">SYNAPSE_NODES: <tspan fill="#00F2FE">1,024 ACTIVE</tspan></text>
-      <text x="12" y="38" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">AGENT_LATENCY: <tspan fill="#00F5D4">1.2ms</tspan></text>
-      <text x="12" y="56" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">DECISION_TREE: <tspan fill="#FFD700">OPTIMAL</tspan></text>
-
-      <text x="160" y="20" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">CAUSAL_GRAPH: <tspan fill="#9D4EDD">CONNECTED</tspan></text>
-      <text x="160" y="38" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">VECTOR_STORE: <tspan fill="#FF007F">FAISS / WEAVIATE</tspan></text>
-      <text x="160" y="56" class="font-hud" font-size="8.8" fill="#64748b" font-weight="700">MODEL_PARALLEL: <tspan fill="#00F2FE">8x GPU</tspan></text>
-    </g>
-  </g>
-
-  <!-- ==================== RIGHT PANEL: RADAR & fMRI DECODERS ==================== -->
-  <g transform="translate(690, 95)">
-    <rect width="280" height="445" class="hud-box"/>
-    <rect width="280" height="445" class="hud-glow"/>
-
-    <text x="20" y="28" class="font-orbitron panel-header">🛰️ RADAR &amp; fMRI SPECTRUM</text>
-    <line x1="20" y1="38" x2="260" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Tactical Radar Array -->
+  <!-- ================= LEFT: REFINED TYPOGRAPHY ================= -->
+  <g transform="translate(48, 40)">
+    <!-- Status Pill -->
     <g transform="translate(0, 0)">
-      <circle cx="830" cy="120" r="50" fill="#02050c" stroke="#1e293b" stroke-width="1"/>
-      <circle cx="830" cy="120" r="35" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-dasharray="2 2"/>
-      <circle cx="830" cy="120" r="18" fill="none" stroke="#1e293b" stroke-width="0.6"/>
-      <line x1="775" y1="120" x2="885" y2="120" stroke="#1e293b" stroke-width="0.5"/>
-      <line x1="830" y1="65" x2="830" y2="175" stroke="#1e293b" stroke-width="0.5"/>
-
-      <!-- Sweep Line -->
-      <line x1="830" y1="120" x2="830" y2="70" stroke="#00F5D4" stroke-width="1.5" class="sweep-line"/>
-
-      <!-- Radar Blips -->
-      <circle cx="810" cy="98" class="radar-blip" style="animation-delay: 0.5s;"/>
-      <circle cx="855" cy="135" class="radar-blip" style="animation-delay: 1.8s;"/>
-      <circle cx="840" cy="92" class="radar-blip" style="animation-delay: 3.2s;"/>
-
-      <text x="830" y="186" class="font-code" font-size="8" fill="#00F5D4" text-anchor="middle">SWARM_DEFENSE: <tspan fill="#e2e8f0">4 DRONES TRACKED</tspan></text>
+      <rect width="186" height="24" rx="12" fill="#0B132B" stroke="#10B981" stroke-width="0.8" stroke-opacity="0.4"/>
+      <circle cx="14" cy="12" r="3.5" fill="#34D399" class="live-dot" filter="url(#softGlow)"/>
+      <text x="26" y="15.5" class="status-text">AVAILABLE FOR RESEARCH</text>
     </g>
 
-    <!-- fMRI Wave Monitors (Clean vertical placement, zero text overlap) -->
-    <g transform="translate(15, 202)">
-      <!-- Wave 1: Alpha -->
-      <g transform="translate(0, 0)">
-        <rect width="250" height="60" fill="#02050c" stroke="#1e293b" stroke-width="1" rx="3"/>
-        <text x="10" y="15" class="font-hud" font-size="8.2" font-weight="700" fill="#00F2FE">VISUAL CORTEX (ALPHA WAVE)</text>
-        <path d="M 10,36 Q 25,16 40,36 T 70,36 T 100,36 T 130,36 T 160,36 T 190,36 T 220,36 T 240,36" fill="none" class="wave-alpha"/>
-      </g>
+    <!-- Name -->
+    <text x="0" y="58" class="title">NIKHIL CHAPKANADE</text>
 
-      <!-- Wave 2: Beta -->
-      <g transform="translate(0, 68)">
-        <rect width="250" height="60" fill="#02050c" stroke="#1e293b" stroke-width="1" rx="3"/>
-        <text x="10" y="15" class="font-hud" font-size="8.2" font-weight="700" fill="#9D4EDD">PREFRONTAL REASONING (BETA)</text>
-        <path d="M 10,36 Q 25,20 40,36 T 70,36 T 100,36 T 130,36 T 160,36 T 190,36 T 220,36 T 240,36" fill="none" class="wave-beta"/>
-      </g>
+    <!-- Headline Tagline -->
+    <text x="0" y="85" class="tagline">Designing autonomous systems that perceive, reason, and act.</text>
 
-      <!-- Wave 3: Gamma -->
-      <g transform="translate(0, 136)">
-        <rect width="250" height="60" fill="#02050c" stroke="#1e293b" stroke-width="1" rx="3"/>
-        <text x="10" y="15" class="font-hud" font-size="8.2" font-weight="700" fill="#00F5D4">SWARM COORDINATION (GAMMA)</text>
-        <path d="M 10,36 Q 25,24 40,36 T 70,36 T 100,36 T 130,36 T 160,36 T 190,36 T 220,36 T 240,36" fill="none" class="wave-gamma"/>
-      </g>
+    <!-- Domain Focus -->
+    <g transform="translate(0, 116)">
+      <text x="0" y="0" class="sub-tags">AGENTIC AI</text>
+      <circle cx="78" cy="-3.5" r="1.5" fill="#475569"/>
+      <text x="90" y="0" class="sub-tags">REINFORCEMENT LEARNING</text>
+      <circle cx="260" cy="-3.5" r="1.5" fill="#475569"/>
+      <text x="272" y="0" class="sub-tags">NEUROSCIENCE</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT: MINIMAL ORGANIC WAVE ART ================= -->
+  <g transform="translate(40, 0)">
+    <!-- Harmonic Wave 1 (Cyan) -->
+    <g class="wave-1">
+      <path d="M 520,105 C 570,55 630,155 690,105 C 750,55 810,155 870,105"
+            fill="none" stroke="url(#waveGrad1)" stroke-width="2" filter="url(#softGlow)"/>
+      <path d="M 520,105 C 570,55 630,155 690,105 C 750,55 810,155 870,105"
+            fill="none" stroke="#38BDF8" stroke-width="1.2" class="pulse-flow" opacity="0.6"/>
+    </g>
+
+    <!-- Harmonic Wave 2 (Violet) -->
+    <g class="wave-2">
+      <path d="M 520,105 C 580,145 640,65 700,105 C 760,145 820,65 880,105"
+            fill="none" stroke="url(#waveGrad2)" stroke-width="1.8" opacity="0.85"/>
+      <path d="M 520,105 C 580,145 640,65 700,105 C 760,145 820,65 880,105"
+            fill="none" stroke="#A855F7" stroke-width="1" class="pulse-flow" opacity="0.4" style="animation-direction: reverse;"/>
+    </g>
+
+    <!-- Harmonic Wave 3 (Emerald/Teal) -->
+    <g class="wave-3">
+      <path d="M 540,105 C 600,80 660,130 720,105 C 780,80 840,130 890,105"
+            fill="none" stroke="url(#waveGrad3)" stroke-width="1.5" opacity="0.75"/>
+    </g>
+
+    <!-- Synapse Harmonic Nodes -->
+    <g transform="translate(690, 105)">
+      <circle r="7" fill="#38BDF8" fill-opacity="0.15"/>
+      <circle r="3.5" fill="#38BDF8" filter="url(#softGlow)"/>
+      <circle r="1" fill="#FFFFFF"/>
+    </g>
+
+    <g transform="translate(750, 72)">
+      <circle r="5" fill="#818CF8" fill-opacity="0.15"/>
+      <circle r="2.5" fill="#818CF8" filter="url(#softGlow)"/>
+    </g>
+
+    <g transform="translate(630, 138)">
+      <circle r="5" fill="#34D399" fill-opacity="0.15"/>
+      <circle r="2.5" fill="#34D399" filter="url(#softGlow)"/>
+    </g>
+
+    <g transform="translate(810, 138)">
+      <circle r="6" fill="#A855F7" fill-opacity="0.15"/>
+      <circle r="3" fill="#A855F7" filter="url(#softGlow)"/>
     </g>
   </g>
 </svg>
